@@ -39,9 +39,11 @@ ActiveRecord::Schema.define(version: 20160823103033) do
     t.string   "status"
     t.text     "content"
     t.integer  "quest_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["quest_id"], name: "index_efforts_on_quest_id", using: :btree
+    t.index ["question_id"], name: "index_efforts_on_question_id", using: :btree
   end
 
   create_table "questions", force: :cascade do |t|
@@ -85,6 +87,7 @@ ActiveRecord::Schema.define(version: 20160823103033) do
 
   add_foreign_key "answers", "questions"
   add_foreign_key "challenges", "users", column: "teacher_id"
+  add_foreign_key "efforts", "questions"
   add_foreign_key "efforts", "quests"
   add_foreign_key "questions", "challenges"
   add_foreign_key "quests", "challenges"
