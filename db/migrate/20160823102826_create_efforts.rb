@@ -4,6 +4,7 @@ class CreateEfforts < ActiveRecord::Migration[5.0]
       t.string :status
       t.text :content
       t.references :quest, foreign_key: true
+      t.references :question, foreign_key: true
 
       t.timestamps
     end
