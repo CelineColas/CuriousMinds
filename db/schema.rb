@@ -10,26 +10,82 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823094103) do
+ActiveRecord::Schema.define(version: 20160823103033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "answers", force: :cascade do |t|
+    t.text     "content"
+    t.text     "hint"
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["question_id"], name: "index_answers_on_question_id", using: :btree
+  end
+
+  create_table "challenges", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "category"
+    t.integer  "difficulty"
+    t.string   "file"
+    t.integer  "teacher_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "efforts", force: :cascade do |t|
+    t.string   "status"
+    t.text     "content"
+    t.integer  "quest_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quest_id"], name: "index_efforts_on_quest_id", using: :btree
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "challenge_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["challenge_id"], name: "index_questions_on_challenge_id", using: :btree
+  end
+
+  create_table "quests", force: :cascade do |t|
+    t.string   "status"
+    t.integer  "challenge_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["challenge_id"], name: "index_quests_on_challenge_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "name"
+    t.string   "photo"
+    t.string   "school"
+    t.text     "experience"
+    t.text     "interests"
+    t.boolean  "teacher",                default: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "challenges", "users", column: "teacher_id"
+  add_foreign_key "efforts", "quests"
+  add_foreign_key "questions", "challenges"
+  add_foreign_key "quests", "challenges"
 end
