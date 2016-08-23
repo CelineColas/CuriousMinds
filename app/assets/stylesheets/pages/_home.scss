@@ -2,3 +2,254 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+html,
+.homepage {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+
+.start {
+    color: yellowgreen;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.start:hover,
+.start:focus {
+    color: forestgreen;
+}
+
+
+.topscreen {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: blue;
+    background-image: image-url("header.jpg");
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.topscreen .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px 70px;
+    text-align: center;
+}
+
+.topscreen .header-content .header-content-inner .moto {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.topscreen .header-content .header-content-inner .toptext {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,.7);
+}
+
+@media(min-width:768px) {
+    .topscreen {
+        min-height: 100%;
+    }
+
+    .topscreen .header-content {
+        position: absolute;
+        top: 50%;
+        padding: 0 50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .topscreen .header-content .header-content-inner {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1000px;
+    }
+
+  .topscreen .header-content .header-content-inner h1 {
+      font-size: 100px;
+    }
+
+    .topscreen .header-content .header-content-inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
+}
+
+.section-heading {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.intro {
+  color: #fff;
+    background-color: yellowgreen;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.content {
+    padding: 100px 0;
+}
+
+.promo,
+.promo .inpromos,
+.promo .start:link,
+.promo .start:visited,
+.promo .start:hover,
+.promo .start:active {
+    color: white;
+  text-shadow: 0px 0px 40px black;
+    text-decoration: none;
+}
+
+.promo-item {
+    height: 200px;
+    line-height: 180px;
+    text-align: center;
+}
+
+.promo-item:hover {
+    background-size: 110%;
+    border: 10px solid rgba(255,255,255,0.3);
+    line-height: 160px;
+}
+
+.promo-item h3 {
+    font-size: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.item-1 {
+  background-image: image-url("writing.jpg");
+  }
+
+.item-2 {
+  background-image: image-url("concert.jpg");
+  }
+
+.item-3 {
+  background-image: image-url("pencil_sharpener.jpg");
+  }
+
+.item-1,
+.item-2,
+.item-3 {
+  background-size: cover;
+  background-position: 50% 50%;
+  }
+
+  //
+  //
+  // footer
+  //
+  //
+
+.page-footer {
+  text-align: center;
+  }
+
+.page-footer .contact {
+  padding: 100px 0;
+  background-color: yellowgreen;
+  color: #fff;
+  }
+
+.page-footer .contact p {
+  font-size: 22px;
+  font-weight: 300;
+  }
+
+.content-3 .glyphicon,
+.page-footer .contact .glyphicon {
+  font-size: 32px;
+  font-weight: 700;
+  }
+
+.page-footer .small-print {
+  padding: 50px 0 40px;
+  font-weight: 300;
+  }
+
+.text-light {
+    color: rgba(255,255,255,.7);
+}
+
+
+.btn-primary {
+    border-color: yellowgreen;
+    color: #fff;
+    background-color: yellowgreen;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: limegreen;
+    color: #fff;
+    background-color: limegreen;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color: yellowgreen;
+    background-color: yellowgreen;
+}
+
+.btn-primary .badge {
+    color: yellowgreen;
+    background-color: #fff;
+}
+
+
+.btn {
+    border-radius: 300px;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+}
