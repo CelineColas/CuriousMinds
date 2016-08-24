@@ -6,6 +6,7 @@
     <%= form_tag(student_challenges_path, method: "get") do %>
     <%= label_tag(:category, "Search for:", class: "form-el") %>
     <%= text_field_tag(:category, nil, placeholder: "Category", class: "form-el") %>
+    <!-- lines 7-8 : change into select field -->
     <%= submit_tag("Search", class: "form-el") %>
     <% end %>
   </div>
