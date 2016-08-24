@@ -1,8 +1,8 @@
 class Student::QuestsController < ApplicationController
-  # before_action :find_quest, only: [:show]
+  before_action :find_quest, only: [:show]
 
   def index
-    # @quests = current_user.quests
+    @quests = current_user.quests
   end
 
   def show
@@ -15,7 +15,7 @@ class Student::QuestsController < ApplicationController
   private
 
   def find_quest
-    # @quest = Quest.find(params[:id])
+    @quest = Quest.find(params[:id])
   end
 
 end
