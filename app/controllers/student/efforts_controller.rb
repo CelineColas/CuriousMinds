@@ -1,4 +1,4 @@
-class Student::Quests::EffortsController < ApplicationController
+class Student::EffortsController < ApplicationController
 
   def new
     @effort = Effort.new
