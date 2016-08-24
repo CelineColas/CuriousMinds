@@ -1,1 +1,69 @@
-This is the edit student's profile page
+<body>
+ <div class="container">
+   <div class="row">
+     <div class="col-md-12">
+       <div class="panel">
+         <img class="pic img-circle" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User photo"/>
+         <div class="username">Nickname</div>
+        </div>
+     </div>
+     </div>
+     <div class="row">
+       <div class="col-md-3">
+     <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="visible-xs navbar-brand">Profile menu</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Edit profile</a></li>
+            <li><a href="#">Change password</a></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+     </div>
+     <div class="col-md-9">
+       <span class="profile-item-header"> Edit profile:</span>
+        <div class="edit-profile">
+       <form id="editProfileForm" method="post">
+         <div class="form-group row">
+           <label class="col-xs-3 form-control-label" for="firstName">Nickname</label>
+           <div class="col-xs-9">
+            <input type="text" class="form-control" id="firstName" placeholder="Enter your Nickname">
+           </div>
+          </div>
+           <div class="form-group row">
+           <label class="col-xs-3 form-control-label" for="lastName">School</label>
+           <div class="col-xs-9">
+            <input type="text" class="form-control" id="lastName" placeholder="Enter your School">
+           </div>
+          </div>
+          <div class="form-group row">
+           <label class="col-xs-3 form-control-label" for="firstName">Interests</label>
+           <div class="col-xs-9">
+            <input type="text" class="form-control" id="firstName" placeholder="Enter your Interests(Music, Sports etc)">
+           </div>
+          </div>
+          <div class="form-group row">
+           <label class="col-xs-3 form-control-label" for="avatar">Choose avatar</label>
+           <div class="col-xs-9">
+<input name="avatar" type="file" class="file file-loading" data-allowed-file-extensions='["png", "jpg"]'>
+           </div>
+           </div>
+           <div class="col-xs-12 button-container">
+           <input class="btn btn-default" type="submit" value="Save changes"/>
+           <input class="btn btn-default" type="reset" value="Reset changes"/>
+           </div>
+       </form>
+     </div>
+   </div>
+  </div>
+</body>
