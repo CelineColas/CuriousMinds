@@ -1,14 +1,16 @@
 class Student::Challenges::QuestsController < ApplicationController
+  before_action :find_challenge
 
   def new
     @quest = Quest.new
   end
 
   def create
-    @quest = Quest.new(quest_params)
-    @quest.user = current_user
-    if @quest.save
-      redirect_to quest_path(@quest)
+    @quest = Quest.where(student: current_user, challenge: @challenge).first_or_initialize
+
+    if @quest.save!
+      # redirect_to student_quest_path(@quest)
+      redirect_to student_quest_question_path(@quest, current_user, @question)
     else
       render :new
     end
@@ -16,11 +18,7 @@ class Student::Challenges::QuestsController < ApplicationController
 
   private
 
-  def quest_params
-    params.require(:quest).permit(:status, :challenge_id)
-  end
-
-  def set_car
-    @quest = Quest.find(params[:id])
+  def find_challenge
+    @challenge = Challenge.find(params[:challenge_id])
   end
 end

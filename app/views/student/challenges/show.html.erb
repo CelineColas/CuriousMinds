@@ -7,6 +7,7 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facilis tenetur est. Nihil necessitatibus eligendi, velit nisi repudiandae assumenda sed voluptate aut corrupti fugit temporibus sequi alias dolores cumque iure.</p>
 </div>
 
-<%= link_to "Let's go!", student_quests_path, class: "btn btn-primary" %>
-
+<%= simple_form_for [:student, @challenge, @quest] do |f| %>
+  <%= f.submit "Let's go!", class: "btn btn-primary" %>
+<% end %>
 </div>

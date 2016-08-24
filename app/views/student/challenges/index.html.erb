@@ -5,8 +5,9 @@
 <div class="text-center form-inline search-bar">
     <%= form_tag(student_challenges_path, method: "get") do %>
     <%= label_tag(:category, "Search for:", class: "form-el") %>
-    <%= text_field_tag(:category, nil, placeholder: "Category", class: "form-el") %>
-    <!-- lines 7-8 : change into select field -->
+    <% categories_array = ["Back-end development", "Mathematics", "Design",
+      "Ruby", "Front-end development" ]%>
+    <%= select_tag(:category, options_for_select(categories_array), class: "form-el") %>
     <%= submit_tag("Search", class: "form-el") %>
     <% end %>
   </div>

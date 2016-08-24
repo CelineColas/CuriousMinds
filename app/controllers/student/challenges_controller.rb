@@ -2,21 +2,22 @@ class Student::ChallengesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :find_challenge, only: [:show]
 
-def index
-  @challenges = Challenge.all
+  def index
+    @challenges = Challenge.all
 
-  if params[:category]
-    @challenges = @challenges.where("category ILIKE ?", "%#{params[:category]}%")
+    if params[:category]
+      @challenges = @challenges.where("category ILIKE ?", "%#{params[:category]}%")
+    end
   end
-end
 
-def show
-end
+  def show
+    @quest = Quest.new
+  end
 
-private
+  private
 
-def find_challenge
-  @challenge = Challenge.find(params[:id])
-end
+  def find_challenge
+    @challenge = Challenge.find(params[:id])
+  end
 
 end
