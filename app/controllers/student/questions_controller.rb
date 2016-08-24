@@ -5,7 +5,7 @@ class Student::QuestionsController <  ApplicationController
   def show
     @question = Question.first
     if @question.save!
-      @question
+      # @question = Question.new --> Is it right ?
     else
       render :new
     end
