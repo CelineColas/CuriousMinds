@@ -15,7 +15,7 @@ class Student::ProfilesController < ApplicationController
 
   private
   def profile_params
-    params.require(:user).permit(:name, :photo, :school, :experience, :interests)
+    params.require(:user).permit(:name, :photo, :school, :interests)
   end
 
   def find_profile
