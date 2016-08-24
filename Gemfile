@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
+gem "cloudinary", "1.1.0"
+gem "attachinary", github: "assembler/attachinary"
+gem "jquery-fileupload-rails"
+gem "coffee-rails"
+
 gem 'rails', '5.0.0.1'
 gem 'puma'
 gem 'pg'
@@ -20,7 +25,7 @@ gem 'autoprefixer-rails'
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
