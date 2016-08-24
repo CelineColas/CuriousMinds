@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resource :profile, only: [:show, :edit, :update]
 
     resources :challenges, only: [:index, :show] do
-      resources :quests, only: [:new, :create], controller: 'challenges/quests'
+      resources :quests, only: [:create], controller: 'challenges/quests'
     end
 
     resources :quests, only: [:index, :show] do

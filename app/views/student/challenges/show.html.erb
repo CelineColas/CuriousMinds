@@ -2,6 +2,7 @@
 
 <h2><%= @challenge.title %></h2>
 
+<<<<<<< HEAD
   <div class="container-mission">
     <h4>Your mission</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores alias laboriosam omnis exercitationem, veniam consequatur, rerum eveniet? Provident nobis et, assumenda quo alias. Aperiam, reiciendis dolore beatae adipisci aliquid esse?</p>
@@ -12,3 +13,14 @@
 </div>
 
 
+=======
+<div class="container-description">
+  <h4>Your mission</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facilis tenetur est. Nihil necessitatibus eligendi, velit nisi repudiandae assumenda sed voluptate aut corrupti fugit temporibus sequi alias dolores cumque iure.</p>
+</div>
+
+<%= simple_form_for [:student, @challenge, @quest] do |f| %>
+  <%= f.submit "Let's go!", class: "btn btn-primary" %>
+<% end %>
+</div>
+>>>>>>> challenges-and-quests-controllers-and-views

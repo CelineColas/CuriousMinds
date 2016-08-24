@@ -1,0 +1,61 @@
+/* perspective */
+
+.flip-container {
+  perspective: 1000;
+  margin: 10px;
+  float: left;
+}
+/* turning on hover */
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+  width: 500px;
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 20px;
+}
+/* flipping speed here */
+
+.flipper {
+  transition: 0.9s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+/* making the the other side hidden while flipping */
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* front side is in front of a back side */
+
+.front {
+  z-index: 2;
+  background-color: #777;
+  color: white;
+}
+/* back side */
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #eee;
+}
+
+.back p {
+  font-size: 18px;
+  margin-top: 0px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: #777;
+  color: white;
+}
