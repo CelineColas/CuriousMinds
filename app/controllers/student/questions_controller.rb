@@ -4,6 +4,11 @@ class Student::QuestionsController <  ApplicationController
 
   def show
     @question = Question.first
+    if @question.save!
+      @question
+    else
+      render :new
+    end
   end
 
   private
