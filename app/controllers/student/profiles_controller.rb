@@ -13,7 +13,6 @@ class Student::ProfilesController < ApplicationController
     redirect_to student_profile_path
   end
 
-
   private
   def profile_params
     params.require(:user).permit(:name, :photo, :school, :experience, :interests)

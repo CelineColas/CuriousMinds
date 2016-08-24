@@ -10,8 +10,13 @@
             <div class="header-content-inner">
                 <p class = "toptext">A web-site to play and learn</p>
                 <h1 class= "moto">Are you a Curious Mind?</h1>
-                <a href="#" class="btn btn-primary btn-lg start">START</a>
-                <a href="#" class="btn btn-primary btn-lg start">I AM NEW</a>
+                  <%= link_to new_user_session_path do %>
+                   <button class="btn btn-primary btn-lg start"> START</button>
+                  <%end%>
+
+                  <%= link_to new_user_registration_path do %>
+                   <button class="btn btn-primary btn-lg start"> I AM NEW</button>
+                  <%end%>
             </div>
         </div>
 
