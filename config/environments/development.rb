@@ -46,6 +46,9 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+#   Initialize default meta tags.
+# DEFAULT_META = YAML.load_file(Rails.root.join('config/meta.yml'))
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
