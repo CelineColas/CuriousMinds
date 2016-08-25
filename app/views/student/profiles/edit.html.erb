@@ -36,13 +36,11 @@
         <%= f.input :name, label: 'Nickname' , placeholder: 'Write your Nickname here' %>
         <%= f.input :school, label: 'School' , placeholder: 'Write your School here' %>
         <%= f.input :interests, label: 'Interests' , placeholder: 'Write your Interests here' %>
-        <%= f.input :photo, as: :attachinary%>
-        <% if @product.photo? %>
-          <%= cl_image_tag @product.photo.path, width: 200, height: 300, crop: :fill %>
-        <% end %>
         <%= f.button :submit %>
         <%end %>
        </div>
    </div>
   </div>
 </body>
+
+
