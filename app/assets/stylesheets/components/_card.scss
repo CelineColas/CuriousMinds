@@ -25,12 +25,11 @@
   z-index: 2;
   font-size: 30px;
   text-align: center;
-  line-height: 300px;
 }
 
 .flip .card .front {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   background: $gray-light;
   color: white;
   cursor: pointer;
@@ -44,3 +43,29 @@
   cursor: pointer;
   border-radius: 20px;
 }
+
+.question-input-field {
+  z-index: 99999;
+}
+
+// .flipped {
+//   transform: rotateY(-180deg);
+// }
+
+// .face .back {
+// position: relative;
+// }
+
+// .question-input-field {
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   right: 15px;
+//   z-index: 3;
+// }
+.wrapper {
+    height: 250px;
+    width: 500px;
+}
+
+

@@ -1,14 +1,24 @@
 <div class="flip">
+
   <div class="card">
+
     <div class="face front">
       <%= @question.title %>
     </div>
+
+
     <div class="face back">
+
+
+      <div class="question-input-field">
       <%= simple_form_for [:student, @quest, @question, @effort] do |f| %>
-      <%= f.input :content, placeholder: "Your answer here" %>
+      <%= f.input :content %>
       <%= f.button :submit, class: "btn btn-success" %>
       <% end %>
-    </div>
+      </div>
+      <div class="wrapper">
+
+      </div>
   </div>
 </div>
-
+</div>
