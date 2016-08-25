@@ -24,46 +24,25 @@
         <div class="navbar-collapse collapse sidebar-navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="#">Edit profile</a></li>
-            <li><a href="#">Change password</a></li>
           </ul>
         </div>
       </div>
   </div>
      </div>
      <div class="col-md-9">
-       <span class="profile-item-header"> Edit profile:</span>
+<!--        <span class="profile-item-header"> Edit profile:</span> -->
         <div class="edit-profile">
-       <form id="editProfileForm" method="post">
-         <div class="form-group row">
-           <label class="col-xs-3 form-control-label" for="firstName">Nickname</label>
-           <div class="col-xs-9">
-            <input type="text" class="form-control" id="firstName" placeholder="Enter your Nickname">
-           </div>
-          </div>
-           <div class="form-group row">
-           <label class="col-xs-3 form-control-label" for="lastName">School</label>
-           <div class="col-xs-9">
-            <input type="text" class="form-control" id="lastName" placeholder="Enter your School">
-           </div>
-          </div>
-          <div class="form-group row">
-           <label class="col-xs-3 form-control-label" for="firstName">Interests</label>
-           <div class="col-xs-9">
-            <input type="text" class="form-control" id="firstName" placeholder="Enter your Interests(Music, Sports etc)">
-           </div>
-          </div>
-          <div class="form-group row">
-           <label class="col-xs-3 form-control-label" for="avatar">Choose avatar</label>
-           <div class="col-xs-9">
-<input name="avatar" type="file" class="file file-loading" data-allowed-file-extensions='["png", "jpg"]'>
-           </div>
-           </div>
-           <div class="col-xs-12 button-container">
-           <input class="btn btn-default" type="submit" value="Save changes"/>
-           <input class="btn btn-default" type="reset" value="Reset changes"/>
-           </div>
-       </form>
-     </div>
+        <%= simple_form_for(current_user, url: student_profile_path(current_user), html: { method: :put })   do |f| %>
+        <%= f.input :name, label: 'Nickname' , placeholder: 'Write your Nickname here' %>
+        <%= f.input :school, label: 'School' , placeholder: 'Write your School here' %>
+        <%= f.input :interests, label: 'Interests' , placeholder: 'Write your Interests here' %>
+        <%= f.input :photo, as: :attachinary%>
+        <% if @product.photo? %>
+          <%= cl_image_tag @product.photo.path, width: 200, height: 300, crop: :fill %>
+        <% end %>
+        <%= f.button :submit %>
+        <%end %>
+       </div>
    </div>
   </div>
 </body>
