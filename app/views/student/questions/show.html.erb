@@ -1,18 +1,24 @@
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-offset-3 col-md-6">
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-          <div class="flipper">
-            <div class="front">
-              <p><%= @question.title %></p>
-            </div>
-            <div class="back">
-              <p>I want the answeeeeerrrrr NOW !!!!</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="flip">
+
+  <div class="card">
+
+    <div class="face front">
+      <%= @question.title %>
     </div>
+
+
+    <div class="face back">
+
+
+      <div class="question-input-field">
+      <%= simple_form_for [:student, @quest, @question, @effort] do |f| %>
+      <%= f.input :content %>
+      <%= f.button :submit, class: "btn btn-success" %>
+      <% end %>
+      </div>
+      <div class="wrapper">
+
+      </div>
   </div>
-
-
+</div>
+</div>
