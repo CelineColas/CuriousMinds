@@ -4,6 +4,12 @@ class Student::QuestionsController <  ApplicationController
 
   def show
     @effort = Effort.new
+    @question = Question.first
+    if @question.save!
+      # @question = Question.new --> Is it right ?
+    else
+      render :new
+    end
   end
 
   private
