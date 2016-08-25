@@ -1,61 +1,46 @@
-/* perspective */
-
-.flip-container {
-  perspective: 1000;
-  margin: 10px;
-  float: left;
-}
-/* turning on hover */
-
-.flip-container:hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip-container,
-.front,
-.back {
+.flip {
+  -webkit-perspective: 800;
   width: 500px;
   height: 300px;
-  line-height: 300px;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 20px;
-}
-/* flipping speed here */
-
-.flipper {
-  transition: 0.9s;
-  transform-style: preserve-3d;
   position: relative;
+  margin: 50px auto;
 }
-/* making the the other side hidden while flipping */
 
-.front,
-.back {
-  backface-visibility: hidden;
+.flip .card.flipped {
+  -webkit-transform: rotateY(-180deg);
+}
+
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.8s;
+}
+
+.flip .card .face {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-}
-/* front side is in front of a back side */
-
-.front {
+  -webkit-backface-visibility: hidden ;
   z-index: 2;
-  background-color: #777;
+  font-size: 30px;
+  text-align: center;
+  line-height: 300px;
+}
+
+.flip .card .front {
+  position: absolute;
+  z-index: 1;
+  background: $gray-light;
   color: white;
-}
-/* back side */
-
-.back {
-  transform: rotateY(180deg);
-  background-color: #eee;
-}
-
-.back p {
-  font-size: 18px;
-  margin-top: 0px;
-  border: 1px solid white;
+  cursor: pointer;
   border-radius: 20px;
-  background-color: #777;
+}
+
+.flip .card .back {
+  -webkit-transform: rotateY(-180deg);
+  background: $gray-light;
   color: white;
+  cursor: pointer;
+  border-radius: 20px;
 }
