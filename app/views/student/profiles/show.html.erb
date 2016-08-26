@@ -1,59 +1,61 @@
-<div id="myCv3" class="change">
-<div id="myCv2" class="red">
-<div id="myCv" class="gen">
-<div class="redbg"></div>
-<div class="defaultbg"></div>
-<div class="bluebg"></div>
-<div class="maintitle">Welcome to my Profile</div>
+<div class="container-fluid outerbox">
+  <div class="row content stmanage">
+      <div class="col-sm-3 sidenavbar">
+        <h4><%= current_user.name %></h4>
+        <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
+        <ul class="nav nav-pills navbar-stacked">
+          <li>
+            <%= link_to student_challenges_path do %>
+            <button class="btn sidebar"> New Challenge </button>
+            <%end%>
+          </li>
 
-    <div class="corp">
-      <div id="ModelCard">
-      <img src="kid.jpg" alt="Profile pic"/>
-      <hr class="newline"/>
-
-
-
-        <%= link_to student_challenges_path, method: :patch do %>
-        <button class="btn sidebar"> New Challenge </button>
-        <%end%>
-
-        <%= link_to student_challenges_path, method: :patch do %>
-        <button class="btn sidebar"> History and Progress </button>
-        <%end%>
-
-        <%= link_to edit_student_profile_path, method: :patch do %>
-        <button class="btn sidebar"> Edit profile</button>
-        <%end%>
-
-      <hr class="newline"/>
+          <li>
+            <%= link_to student_challenges_path do %>
+            <button class="btn sidebar"> History and Progress </button>
+            <%end%>
+          </li>
+          <li>
+            <%= link_to edit_student_profile_path do %>
+            <button class="btn sidebar"> Edit profile</button>
+            <%end%>
+          </li>
+        </ul><br>
       </div>
-    </div>
-          <div id="AboutMe">
-            <div class="skilltitle">Not finished Challenges</div>
-          <div class="corp corpus xcr">
-            <div class="unscor">
-              I Love Dancing
-              <div class="skills_model1"><div class="metru_concept m100skill bxhdw"></div></div>
-            </div>
-            <div class="unscor">
-                I am Funny
-            <div class="skills_model1"><div class="metru_coding m90skill bxhdw"></div></div>
-            </div>
-            <div class="unscor">
-                I love learning
-            <div class="skills_model1"><div class="metru_experience m90skill bxhdw"></div></div>
-            </div>
-          </div>
-      <hr class="newline"/>
-          </div>
-      <hr class="newline"/>
-    </div>
-</div>
-</div>
 
-<div id="change"><div>Select Color</div>
-<a href="#" class="alo">Default</a>
-<a href="#myCv" class="alo"><span class="defaultstyle"></span></a>
-<a href="#myCv2" class="alo"><span class="redstyle"></span></a>
-<a href="#myCv3" class="alo"><span class="bluestyle"></span></a>
+      <div class="col-sm-9">
+        TITLE LIST THEM
+        HERE LINK THE NOT FINISHED CHALLENGES
+
+        <div class="coursesnotdone"></div>
+          <div class="coursesnotdone-wrapper">
+              <div id="data">
+                  <h2 class = "sky">Not finished courses</h2>
+
+                  <!-- <table class="tableone">
+                    <thead>
+                      <tr>
+                        <th class = "cellone">Course name</th>
+                        <th class = "cellone">Teacher</th>
+                        <th class = "cellone">Progress</th>
+                      </tr>
+                    </thead>
+
+                      <% @quest = Quest.where(student: current_user, challenge: @challenge, status: "submitted") %>
+                      <%= @quest.each do |quest| %>
+                    <tbody class="split" >
+                        <tr>
+                          <td class = "celltwo"> <%= quest.current_user.name %></td>
+                          <td class = "celltwo"> <%= quest.challenge.teacher_id %> </td>
+                          <td class = "celltwo"> <%= quest.correct_percentage %> </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                  </table> -->
+              </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
 </div>
