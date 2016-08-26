@@ -5,3 +5,57 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Challenge.destroy_all
+# User.destroy_all
+# Question.destroy_all
+
+ActiveRecord::Base.connection.disable_referential_integrity do
+    User.destroy_all
+    Challenge.destroy_all
+    Question.destroy_all
+
+  hank = User.create(email: "hank@gmail.com", password: "lolipop", name: Faker::Name.name,
+    school: Faker::Educator.secondary_school, experience: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, voluptate.")
+
+  james = User.create(email: "james@gmail.com", password: "pierreiscool", name: Faker::Name.name,
+  school: Faker::Educator.secondary_school, experience: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, voluptate.")
+
+  Challenge.create(title: 'Variables', description: 'Lorem ipsum dolor sit amet.', category: 'Ruby', difficulty: '2', teacher_id: hank.id)
+  Challenge.create(title: 'Javascript', description: 'Lorem ipsum dolor sit amet.', category: 'Front-end development', difficulty: '3', teacher_id: hank.id)
+  Challenge.create(title: 'Rails', description: 'Lorem ipsum dolor sit amet.', category: 'Ruby', difficulty: '3', teacher_id: james.id)
+  Challenge.create(title: 'Algorithm', description: 'Lorem ipsum dolor sit amet.', category: 'Mathematics', difficulty: '3', teacher_id: james.id)
+
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 4)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 1)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 2)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 3)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 4)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 1)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 2)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 3)
+end
+
+
+
+
+# 10.times do
+# User.create(email: Faker::Internet.email, password: Faker::Internet.password, name: Faker::Name.name,
+#   school: Faker::Educator.secondary_school, experience: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, voluptate.",
+#   teacher: false)
+# end
+
+# Challenge.create(title: 'Design a user experience', description: 'Lorem ipsum dolor sit amet.', category: 'Design', difficulty: '5', teacher_id: )
+# Challenge.create(title: 'HTML', description: 'Lorem ipsum dolor sit amet.', category: 'Front-end development', difficulty: '1', teacher_id: )
+# Challenge.create(title: 'CSS', description: 'Lorem ipsum dolor sit amet.', category: 'Front-end development', difficulty: '1', teacher_id: )
+# Challenge.create(title: 'Adobe', description: 'Lorem ipsum dolor sit amet.', category: 'Design', difficulty: '4', teacher_id: )
+# Challenge.create(title: 'Algebra', description: 'Lorem ipsum dolor sit amet.', category: 'Mathematics', difficulty: '2', teacher_id: )
+# Challenge.create(title: 'Logic', description: 'Lorem ipsum dolor sit amet.', category: 'Mathematics', difficulty: '2', teacher_id: )
+# Challenge.create(title: 'Create a landing page', description: 'Lorem ipsum dolor sit amet.', category: 'Design', difficulty: '1', teacher_id: )
+
+
+# Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: )
+# Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: )
+
+
+
