@@ -27,14 +27,19 @@
 
 
 
-$('.front').click(function(){
-  $('.flip > .card:not(.question-input-field').addClass('flipped');
-});
+// $('.front').click(function(){
+//   $('.flip > .card:not(.question-input-field').addClass('flipped');
+// });
 
-$('.wrapper').click(function(event){
-  event.preventDefault();
-  $('.flip > .card').removeClass('flipped');
-});
+// $('.wrapper').click(function(event){
+//   event.preventDefault();
+//   $('.flip > .card').removeClass('flipped');
+// });
 
+
+$('.clickable-surface').on('click', function(){
+  $('.card-front').toggleClass('animate-front');
+  $('.card-back').toggleClass('animate-back');
+});
 
 
