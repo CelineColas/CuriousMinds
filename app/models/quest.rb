@@ -2,7 +2,7 @@ class Quest < ApplicationRecord
   belongs_to :challenge
   belongs_to :student, class_name: "User"
 
-  has_many :efforts
+  has_many :efforts, dependent: :destroy
 
   def number_of_correct_efforts
     efforts.where(status: "correct").count

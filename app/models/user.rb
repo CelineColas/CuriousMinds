@@ -5,8 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :challenges, foreign_key: :teacher_id
-  has_many :quests,     foreign_key: :student_id
+  has_many :challenges, foreign_key: :teacher_id, dependent: :destroy
+  has_many :quests,     foreign_key: :student_id, dependent: :destroy
 
-  has_many :efforts, through: :quests
+  has_many :efforts, through: :quests, dependent: :destroy
 end
