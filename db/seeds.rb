@@ -11,9 +11,9 @@
 # Question.destroy_all
 
 ActiveRecord::Base.connection.disable_referential_integrity do
-    User.destroy_all
-    Challenge.destroy_all
-    Question.destroy_all
+  User.destroy_all
+  Challenge.destroy_all
+  Question.destroy_all
 
   hank = User.create(email: "hank@gmail.com", password: "lolipop", name: Faker::Name.name,
     school: Faker::Educator.secondary_school, experience: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, voluptate.")
@@ -21,19 +21,19 @@ ActiveRecord::Base.connection.disable_referential_integrity do
   james = User.create(email: "james@gmail.com", password: "pierreiscool", name: Faker::Name.name,
   school: Faker::Educator.secondary_school, experience: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, voluptate.")
 
-  Challenge.create(title: 'Variables', description: 'Lorem ipsum dolor sit amet.', category: 'Ruby', difficulty: '2', teacher_id: hank.id)
-  Challenge.create(title: 'Javascript', description: 'Lorem ipsum dolor sit amet.', category: 'Front-end development', difficulty: '3', teacher_id: hank.id)
-  Challenge.create(title: 'Rails', description: 'Lorem ipsum dolor sit amet.', category: 'Ruby', difficulty: '3', teacher_id: james.id)
-  Challenge.create(title: 'Algorithm', description: 'Lorem ipsum dolor sit amet.', category: 'Mathematics', difficulty: '3', teacher_id: james.id)
+  challenge_vars = Challenge.create(title: 'Variables', description: 'Lorem ipsum dolor sit amet.', category: 'Ruby', difficulty: '2', teacher_id: hank.id)
+  challenge_js = Challenge.create(title: 'Javascript', description: 'Lorem ipsum dolor sit amet.', category: 'Front-end development', difficulty: '3', teacher_id: hank.id)
+  challenge_rails = Challenge.create(title: 'Rails', description: 'Lorem ipsum dolor sit amet.', category: 'Ruby', difficulty: '3', teacher_id: james.id)
+  challenge_algo = Challenge.create(title: 'Algorithm', description: 'Lorem ipsum dolor sit amet.', category: 'Mathematics', difficulty: '3', teacher_id: james.id)
 
-  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 4)
-  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 1)
-  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 2)
-  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 3)
-  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 4)
-  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 1)
-  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 2)
-  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?',challenge_id: 3)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_algo)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_vars)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_rails)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_js)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_algo)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_vars)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_rails)
+  Question.create(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_js)
 end
 
 
