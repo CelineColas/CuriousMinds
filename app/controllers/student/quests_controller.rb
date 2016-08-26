@@ -1,5 +1,5 @@
 class Student::QuestsController < ApplicationController
-  before_action :find_quest, only: [:show]
+  before_action :find_quest, only: [:show, :submit]
 
   def index
     @quests = current_user.quests
@@ -9,12 +9,15 @@ class Student::QuestsController < ApplicationController
   end
 
   def submit
-    result = (number_of_correct_efforts.to_s/number_of_questions.to_s)*100
-    if result = 100
-      quest.status = "100%"
+    if @quest.completion_percentage == 100
+      @quest.status = "finished"
     else
-      quest.status = "#{result} %"
+      @quest.status = "submitted"
     end
+
+    @quest.save
+
+    redirect_to student_quest_path(@quest)
   end
 
   private

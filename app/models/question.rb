@@ -1,5 +1,5 @@
 class Question < ApplicationRecord
   belongs_to :challenge
-  has_many :answers
+  has_one :answer
   has_many :efforts
 end

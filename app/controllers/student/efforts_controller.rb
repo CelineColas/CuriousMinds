@@ -7,9 +7,19 @@ class Student::EffortsController < ApplicationController
   # end
 
   def create
-    @effort = @question.efforts.new(content: effort_params[:content], quest_id: params[:quest_id])
+    @effort = @question.efforts.new(effort_params)
+    @effort.quest = @quest
+
+    if @question.answer.content.downcase == @effort.content.downcase
+      @effort.status = "correct"
+    else
+      @effort.status = "wrong"
+    end
+
     if @effort.save
-      @next_question = Question.find((params[:question_id].to_i + 1).to_s)
+      next_question_id = @question.id + 1 # TODO: may not be +1
+      @next_question = Question.find(next_question_id)
+
       redirect_to student_quest_question_path(@quest, @next_question)
     else
       session[:return_to] ||= request.referer
