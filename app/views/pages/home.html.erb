@@ -10,9 +10,15 @@
             <div class="header-content-inner">
                 <p class = "toptext">A web-site to play and learn</p>
                 <h1 class= "moto">Are you a Curious Mind?</h1>
-                  <%= link_to new_user_session_path do %>
-                   <button class="btn btn-primary btn-lg start"> START</button>
-                  <%end%>
+                  <% if user_signed_in? %>
+                    <%= link_to student_profile_path do %>
+                      <button class="btn btn-primary btn-lg start"> START</button>
+                    <% end %>
+                  <% else %>
+                    <%= link_to new_user_session_path do %>
+                      <button class="btn btn-primary btn-lg start"> START</button>
+                    <% end %>
+                  <% end %>
 
                   <%= link_to new_user_registration_path do %>
                    <button class="btn btn-primary btn-lg start"> I AM NEW</button>
