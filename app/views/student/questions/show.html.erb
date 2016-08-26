@@ -1,4 +1,4 @@
-<div class="flip">
+<!-- <div class="flip">
 
   <div class="card">
 
@@ -21,4 +21,24 @@
       </div>
   </div>
 </div>
+</div> -->
+
+
+<div class="card">
+  <div class="card-front">
+    <div class="clickable-surface">
+      <h1><%= @question.title %></h1>
+    </div>
+  </div>
+  <div class="card-back">
+    <div class="card-input">
+      <%= simple_form_for [:student, @quest, @question, @effort] do |f| %>
+      <%= f.input :content %>
+      <%= f.button :submit, class: "btn btn-success" %>
+      <% end %>
+    </div>
+    <div class="clickable-surface">
+
+    </div>
+  </div>
 </div>
