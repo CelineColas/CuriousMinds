@@ -6,7 +6,7 @@ class Student::Challenges::QuestsController < ApplicationController
   end
 
   def create
-    @quest = Quest.where(student: current_user, challenge: @challenge).first_or_initialize
+    @quest = Quest.where(student: current_user, challenge: @challenge, status: "running").first_or_initialize
 
     if @quest.save!
       # redirect_to student_quest_path(@quest)
