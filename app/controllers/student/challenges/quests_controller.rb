@@ -9,8 +9,9 @@ class Student::Challenges::QuestsController < ApplicationController
     @quest = Quest.where(student: current_user, challenge: @challenge, status: "running").first_or_initialize
 
     if @quest.save!
-      # redirect_to student_quest_path(@quest)
-      redirect_to student_quest_question_path(@quest, current_user, @question)
+      # find the first question
+      question = @challenge.questions.order(:id).first
+      redirect_to student_quest_question_path(@quest, question)
     else
       render :new
     end
