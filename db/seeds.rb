@@ -26,14 +26,20 @@ ActiveRecord::Base.connection.disable_referential_integrity do
   challenge_rails = Challenge.create!(title: 'Rails', description: 'Lorem ipsum dolor sit amet.', category: 'Ruby', difficulty: '3', teacher_id: james.id)
   challenge_algo = Challenge.create!(title: 'Algorithm', description: 'Lorem ipsum dolor sit amet.', category: 'Mathematics', difficulty: '3', teacher_id: james.id)
 
-  Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', answer: "Lorem ipsum.", challenge: challenge_algo)
-  Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', answer: "Lorem ipsum.", challenge: challenge_vars)
-  Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', answer: "Lorem ipsum.", challenge: challenge_rails)
-  Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', answer: "Lorem ipsum.", challenge: challenge_js)
-  Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', answer: "Lorem ipsum.", challenge: challenge_algo)
-  Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', answer: "Lorem ipsum.", challenge: challenge_vars)
-  Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', answer: "Lorem ipsum.", challenge: challenge_rails)
-  Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', answer: "Lorem ipsum.", challenge: challenge_js)
+  q1 = Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_algo)
+  q2 = Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_vars)
+  q3 = Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_rails)
+  q4 = Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_js)
+  q5 = Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_algo)
+  q6 = Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_vars)
+  q7 = Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_rails)
+  q8 = Question.create!(title: 'Lorem ipsum dolor sit amet, consectetur adipisicing ?', challenge: challenge_js)
+
+  james_response = Answer.create(content: "Lorem ipsum dolor sit.", hint: "Lorem ipsum dolor.", question: q1)
+  hank_response = Answer.create(content: "Lorem ipsum dolor sit.", hint: "Lorem ipsum dolor.", question: q4)
+  mary_response = Answer.create(content: "Lorem ipsum dolor sit.", hint: "Lorem ipsum dolor.", question: q3)
+  kelly_response = Answer.create(content: "Lorem ipsum dolor sit.", hint: "Lorem ipsum dolor.", question: q2)
+
 end
 
 
