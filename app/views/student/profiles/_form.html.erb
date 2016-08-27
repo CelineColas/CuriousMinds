@@ -1,0 +1,6 @@
+<%= simple_form_for(current_user, url: student_profile_path(current_user), html: { method: :put })   do |f| %>
+        <%= f.input :name, label: 'Nickname' , placeholder: 'Write your Nickname here' %>
+        <%= f.input :school, label: 'School' , placeholder: 'Write your School here' %>
+        <%= f.input :interests, label: 'Interests' , placeholder: 'Write your Interests here' %>
+        <%= f.button :submit %>
+        <%end %>
