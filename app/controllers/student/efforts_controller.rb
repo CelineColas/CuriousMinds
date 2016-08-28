@@ -16,7 +16,7 @@ class Student::EffortsController < ApplicationController
     #   @effort.status = "wrong"
     # end
 
-    if @effort.save
+    if @effort.save!
       next_question_id = @question.id + 1 # TODO: may not be +1
       @next_question = Question.find(next_question_id)
 
