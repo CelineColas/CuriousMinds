@@ -10,13 +10,13 @@ class Student::EffortsController < ApplicationController
     @effort = @question.efforts.new(effort_params)
     @effort.quest = @quest
 
-    if @question.answer.content.downcase == @effort.content.downcase
-      @effort.status = "correct"
-    else
-      @effort.status = "wrong"
-    end
+    # if @question.answer.content.downcase == @effort.content.downcase --> Doesn't work !!!
+    #   @effort.status = "correct"
+    # else
+    #   @effort.status = "wrong"
+    # end
 
-    if @effort.save
+    if @effort.save!
       next_question_id = @question.id + 1 # TODO: may not be +1
       @next_question = Question.find(next_question_id)
 

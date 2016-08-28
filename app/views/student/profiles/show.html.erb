@@ -1,12 +1,12 @@
 <div class="container-fluid outerbox">
   <div class="row content stmanage">
       <div class="col-sm-3 sidenavbar">
-        <h4><%= current_user.name %></h4>
+        <h4 class="nickname text-center"><%= current_user.name %></h4>
         <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
         <ul class="nav nav-pills navbar-stacked">
           <li>
             <%= link_to student_challenges_path do %>
-            <button class="btn sidebar"> New Challenge </button>
+            <button class="btn sidebar"> Start new Challenge </button>
             <%end%>
           </li>
 
@@ -24,13 +24,16 @@
       </div>
 
       <div class="col-sm-9">
-        TITLE LIST THEM
-        HERE LINK THE NOT FINISHED CHALLENGES
-
-        <div class="coursesnotdone"></div>
-          <div class="coursesnotdone-wrapper">
+          <div class="coursesnotdone-wrapper text-center">
               <div id="data">
                   <h2 class = "sky">Not finished courses</h2>
+                  <table class="table table-striped">
+                    <tr>
+                      <td>Challenge</td>
+                      <td>Teacher</td>
+                      <td>Progress</td>
+                    </tr>
+                  </table>
 
                   <!-- <table class="tableone">
                     <thead>
