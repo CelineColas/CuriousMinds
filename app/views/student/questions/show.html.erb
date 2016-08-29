@@ -1,8 +1,9 @@
 <% @question = Question.find(params[:id]) %>
+<div class="desk">
 <div class="card">
   <div class="card-front">
     <div class="clickable-surface">
-      <h1><%= @question.title %></h1>
+      <h1 class="title-card"><%= @question.title %></h1>
     </div>
   </div>
   <div class="card-back">
@@ -19,5 +20,6 @@
 </div>
 
 
-<%= link_to 'Save and Quit', submit_student_quest_path(@quest), method: :patch %>
+<%= link_to 'Save and Quit', submit_student_quest_path(@quest), method: :patch, class: "btn-save" %>
 
+</div>
