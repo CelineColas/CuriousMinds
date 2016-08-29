@@ -8,20 +8,21 @@
     <header class= "topscreen">
         <div class="header-content">
             <div class="header-content-inner">
-                <p class = "toptext">A web-site to play and learn</p>
-                <h1 class= "moto">Are you a Curious Mind?</h1>
+            <%= image_tag 'logo_home.png', id: 'home-logo' %>
+              <p id="intro-text">A curious mind loves learning things and playing. A little curious like new technologies and wants to improve his mind.</p>
+               <h2 id= "moto"><span id="grey-part">Are you a</span> Curious Mind <span id="grey-part">?</span></h2>
                   <% if user_signed_in? %>
                     <%= link_to student_profile_path do %>
-                      <button class="btn btn-primary btn-lg start"> START</button>
+                      <button class="button-start"> START</button>
                     <% end %>
                   <% else %>
                     <%= link_to new_user_session_path do %>
-                      <button class="btn btn-primary btn-lg start"> START</button>
+                      <button class="button-start"> START</button>
                     <% end %>
                   <% end %>
 
                   <%= link_to new_user_registration_path do %>
-                   <button class="btn btn-primary btn-lg start"> NO I'M NOT</button>
+                   <button class="button-start"> NOT YET BUT I WANT</button>
                   <%end%>
             </div>
         </div>
@@ -35,6 +36,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 class="section-heading">Information to parents</h2>
                     <p class="text-light"> Curious Minds is a platform created by students @ Le Wagon Brussels, to provide a creative way for students to enter the world of computer sciences through challenges. All the challenges are provided from professional teachers.</p>
+                    <p class="text-light">We’re deeply committed to creating a <strong>safe</strong> and <strong>secure</strong> learning environment for our students and teachers. We take the protection of this information seriously. <strong>We do not sell your Personal Information</strong> or exploit it for financial gain; we do not sell ads.</p>
                 </div>
             </div>
         </div>
@@ -48,7 +50,7 @@
                   <h2 class="section-header"> Be a computer expert</h2>
                   <p class="lead text-muted">Give the chance to yourself to improve your skills in your free time with the most creative and funny way! </p>
                   <%= link_to new_user_registration_path do %>
-                  <button class="btn btn-primary btn-lg"> Join</button>
+                  <button class="button-start"> Join</button>
                   <% end %>
                 </div>
 
@@ -56,33 +58,6 @@
         </div>
     </section>
 
-<!-- Promos -->
-  <!-- <div class="container-fluid">
-        <div class="row promo">
-          <a href="#">
-        <div class="col-md-4 promo-item item-1">
-          <h3>
-            Solo learning
-          </h3 class="inpromos">
-        </div>
-            </a>
-            <a href="#">
-        <div class="col-md-4 promo-item item-2">
-          <h3 class="inpromos">
-            Team challenges
-          </h3 class="inpromos">
-        </div>
-            </a>
-
-      <a href="#">
-        <div class="col-md-4 promo-item item-3">
-          <h3 class="inpromos">
-            Direct messages
-          </h3 class="inpromos">
-        </div>
-            </a>
-        </div>
-    </div> --><!-- /.container-fluid -->
 
   <!-- Footer -->
     <footer class="page-footer">
@@ -92,10 +67,8 @@
           <div class="container">
         <h2 class="section-heading">Contact Us</h2>
         <ul class= "list-inline contat-infos">
-          <li><span class="glyphicon glyphicon-earphone"></span> </li>
-          <li>+32 (0)476 53 88 75</li>
-          <li><span class="glyphicon glyphicon-envelope"></span></li>
-          <li>contact@kodowallonie.be</li>
+          <li><span class="glyphicon glyphicon-earphone"></span><br/>+32 (0)476 53 88 75</li>
+          <li><span class="glyphicon glyphicon-envelope"></span><br/>contact@kodowallonie.be</li>
         </ul>
           </div>
         </div>
