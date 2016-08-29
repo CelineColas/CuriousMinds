@@ -4,7 +4,7 @@ class Student::QuestionsController <  ApplicationController
 
   def show
     @effort = Effort.new
-    @question = Question.first
+    @question = @quest.challenge.questions.first
     if @question.save!
       # @question = Question.new --> Is it right ?
     else

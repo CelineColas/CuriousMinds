@@ -1,11 +1,13 @@
 <div class="container-fluid outerbox">
   <div class="row content stmanage">
-      <div class="col-sm-4 sidenavbar">
+      <div class="col-sm-3 sidenavbar">
         <h4 class="nickname text-center"><%= current_user.name %></h4>
         <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
         <ul class="nav nav-pills navbar-stacked">
           <li>
-            <%= link_to 'Start new Challenge', student_challenges_path, class:"btn sidebar" %>
+            <%= link_to student_challenges_path do %>
+            <button class="btn sidebar"> Start new Challenge </button>
+            <%end%>
           </li>
 
           <li>
@@ -21,10 +23,10 @@
         </ul><br>
       </div>
 
-      <div class="col-sm-8 listnotdone">
+      <div class="col-sm-9">
           <div class="coursesnotdone-wrapper text-center">
               <div id="data">
-                  <h2 class = "unfinished">Not finished courses</h2>
+                  <h2 class = "sky">Completed Courses</h2>
                   <table class="table table-striped">
                     <thead>
                       <td>Challenge</td>
@@ -32,7 +34,7 @@
                       <td>Progress</td>
                     </thead>
                     <tbody class="split" >
-                      <% @unfinished_quests.each do |quest| %>
+                      <% @finished_quests.each do |quest| %>
                         <tr>
                           <td class = "celltwo"> <%= quest.challenge.title %></td>
                           <td class = "celltwo"> <%= quest.challenge.teacher.name %> </td>
@@ -43,6 +45,8 @@
                   </table>
               </div>
           </div>
+        </div>
+
       </div>
   </div>
 </div>

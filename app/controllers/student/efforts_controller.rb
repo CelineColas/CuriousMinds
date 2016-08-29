@@ -8,6 +8,7 @@ class Student::EffortsController < ApplicationController
 
   def create
     @effort = @question.efforts.new(effort_params)
+    @effort.question = @question
     @effort.quest = @quest
 
     # if @question.answer.content.downcase == @effort.content.downcase --> Doesn't work !!!
@@ -15,12 +16,23 @@ class Student::EffortsController < ApplicationController
     # else
     #   @effort.status = "wrong"
     # end
-
     if @effort.save!
-      next_question_id = @question.id + 1 # TODO: may not be +1
-      @next_question = Question.find(next_question_id)
 
-      redirect_to student_quest_question_path(@quest, @next_question)
+      @all_questions = @quest.challenge.questions.to_a
+      @answered_questions = @quest.efforts.map(&:question)
+      @remaining_questions = @all_questions - @answered_questions
+
+      unless @remaining_questions.empty?
+        next_question_id = @remaining_questions.first.id
+        puts @question.id
+        @question = Question.find(next_question_id)
+        puts @question.id
+        redirect_to student_quest_question_path(@quest, @question)
+      else
+        # Takes them back to profile if finished
+        # TODO - change this to results page or flash message?
+        redirect_to student_profile_path
+      end
     else
       session[:return_to] ||= request.referer
     end

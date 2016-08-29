@@ -1,3 +1,4 @@
+<% @question = Question.find(params[:id]) %>
 <div class="card">
   <div class="card-front">
     <div class="clickable-surface">
@@ -7,8 +8,8 @@
   <div class="card-back">
     <div class="card-input">
       <%= simple_form_for [:student, @quest, @question, @effort] do |f| %>
-      <%= f.input_field :content, class: "input-field" %>
-      <%= f.button :submit, 'Answer', class: "btn btn-success" %>
+        <%= f.input_field :content, class: "input-field" %>
+        <%= f.button :submit, 'Answer', class: "btn btn-success" %>
       <% end %>
     </div>
     <div class="clickable-surface">
@@ -16,3 +17,7 @@
     </div>
   </div>
 </div>
+
+
+<%= link_to 'Save and Quit', submit_student_quest_path(@quest), method: :patch %>
+

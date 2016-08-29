@@ -17,7 +17,7 @@ class Student::QuestsController < ApplicationController
 
     @quest.save
 
-    redirect_to student_quest_path(@quest)
+    redirect_to student_profile_path
   end
 
   private
