@@ -1,38 +1,53 @@
-<div class="wrapper text-center outside">
+<div class="backpic"></div>
+<div class="container-fluid outerbox">
+<!--   <div class="row">
+    <div class="col-sm-12 mainmoto">
+      CURIOUS MIND
+    </div>
+  </div> -->
 
-  <h2>Start a new challenge</h2>
+  <div class="row content stmanage">
+      <div class="col-sm-4 col-xs-6 sidenavbar">
+        <h4 class="nickname text-center"><%= current_user.name %></h4>
+        <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
+        <ul class="nav nav-pills navbar-stacked">
+          <li>
+            <%= link_to 'Playground', student_profile_path, class:"btn sidebar" %>
+          </li>
 
-  <div class="text-center form-inline search-bar">
-    <%= form_tag(student_challenges_path, method: "get") do %>
-    <%= label_tag(:category, "Search for:", class: "form-el") %>
-  <% categories_array = ["Back-end development", "Mathematics", "Design", "Front-end development" ]%>
-    <%= select_tag(:category, options_for_select(categories_array), class: "form-el") %>
-    <%= submit_tag("Search", class: "form-el btn btn-success") %>
-    <% end %>
+          <li>
+            <%= link_to 'History and Progress', history_student_profile_path, class:"btn sidebar" %>
+          </li>
+        </ul><br>
+      </div>
+
+      <div class="col-sm-8 col-xs-6 listnotdone">
+          <div class="coursesnotdone-wrapper text-center">
+              <div id="data">
+                  <h2 class = "unfinished">Start a new challenge</h2>
+                  <table class="table table-striped">
+                    <thead>
+                      <td>Title</td>
+                      <td>Description</td>
+                      <td>Difficulty</td>
+                      <td>Category</td>
+                    </thead>
+                    <tbody class="split" >
+                          <% @challenges.each do |challenge| %>
+                          <tr>
+                            <td><%= link_to student_challenge_path(challenge) do %>
+                              <%= challenge.title %>
+                              <% end %>
+                            </td>
+                            <td><%= challenge.description %></td>
+                            <td><%= challenge.difficulty %></td>
+                            <td><%= challenge.category %></td>
+                          </tr>
+                        <% end %>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
   </div>
-
-  <div></div>
-  <table class="table table-striped">
-    <tr>
-      <td>Title</td>
-      <td>Description</td>
-      <td>Difficulty</td>
-      <td>Category</td>
-    </tr>
-
-    <% @challenges.each do |challenge| %>
-    <tr>
-      <td><%= link_to student_challenge_path(challenge) do %>
-        <%= challenge.title %>
-        <% end %>
-      </td>
-      <td><%= challenge.description %></td>
-      <td><%= challenge.difficulty %></td>
-      <td><%= challenge.category %></td>
-    </tr>
-    <% end %>
-  </table>
-  </div>
-
-    <%= link_to "Back", student_profile_path, class: "btn btn-primary" %>
 </div>
