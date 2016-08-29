@@ -3,6 +3,8 @@ class Student::ProfilesController < ApplicationController
   before_action :find_profile
 
   def show
+    # @quests = Quest.where(student: current_user, challenge: @challenge, status: "submitted")
+    @unfinished_quests = current_user.quests.where(status: 'running')
   end
 
   def edit
@@ -12,6 +14,11 @@ class Student::ProfilesController < ApplicationController
     @profile.update(profile_params)
     redirect_to student_profile_path
   end
+
+  def history
+    @finished_quests = current_user.quests.where(status: 'finished')
+  end
+
 
   private
   def profile_params

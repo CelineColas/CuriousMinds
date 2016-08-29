@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   namespace :student do
-    resource :profile, only: [:show, :edit, :update]
+    resource :profile, only: [:show, :edit, :update] do
+      collection do
+        get :history
+      end
+    end
 
     resources :challenges, only: [:index, :show] do
       resources :quests, only: [:create], controller: 'challenges/quests'

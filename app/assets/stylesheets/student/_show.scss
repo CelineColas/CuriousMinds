@@ -1,12 +1,26 @@
-/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-.stmanage {height: 1500px}
+
+.outerbox{
+  position: relative;
+  margin: 40px;
+  display: flex;
+}
+
 
 /* Set gray background color and 100% height */
 .sidenavbar {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #f1f1f1;
-  height: 450px;
+  height: 400px;
   box-shadow: 0 1px 2px #d1d1d1;
   border-radius:9px;
+}
+
+.listnotdone{
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
@@ -14,14 +28,15 @@
   .sidenavbar {
     height: auto;
     padding: 15px;
-  }
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.stmanage {
+  height: 1500px
+}
+
   .stmanage {height: auto;}
 }
-
-.outerbox{
-  margin: 40px;
-}
-
 
 /* Set avatar's details */
 .stavatar-large {
@@ -34,54 +49,35 @@
   font-size:30px;
 }
 
+
 /* My coursesnotdone design details */
 
-
-.coursesnotdone{
-  background-image: image-url("greyshells.jpg");
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-}
+// .coursesnotdone{
+//   background-image: image-url("greyshells.jpg");
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   z-index: -1;
+// }
 
 .coursesnotdone-wrapper {
   flex: 1 0 auto;
+  background-color: #f1f1f1;
+  height: auto;
+  padding: 0 10px;
+  padding-bottom: 20px;
+  box-shadow: 0 1px 2px #d1d1d1;
+  border-radius:9px;
 }
-
-// .tableone {
-//   background: #64868E;
-//   border: 2px, solid, black;
-//   align-items: center;
-//   color: black;
-//   margin: 0 auto;
-//   font-family: Open Sans;
-//   box-shadow: 0 1px 2px #d1d1d1;
-// }
 
 .split {
  background: #F3FBF1;
  color: black;
 }
 
-// .cellone {
-//  opacity: 0.9;
-//   border: 2px solid black;
-//   border-radius: 5px;
-//   background: #98B4A6;
-//   color:black;
-//   text-align: center;
-// }
-
-// .celltwo {
-//  border: 2px dotted grey;
-//  border-radius: 1px;
-//  padding: 4px;
-// }
-
-.sky {
+.unfinished {
   font-family: Open Sans;
   font-size: 25px;
   width: 300px ;
@@ -96,11 +92,4 @@
   border-radius: 10px;
   color: $gray-dark;
   box-shadow: 0 1px 2px #d1d1d1;
-}
-
-.return {
-  margin: 30px 500px;
-  text-align:center;
-  color: white;
-  font-size: 15px;
 }
