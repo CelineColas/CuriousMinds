@@ -1,87 +1,60 @@
-<!-- <h1>Curious Minds</h1>
-<p>Are you a curious mind ?</p> -->
+<div class= "homepage">
+
+  <div class="homepage-hero-banner">
+    <p>
+      A curious mind loves <strong>learning</strong> & <strong>playing</strong>.<br>
+      A little curious like new technologies and wants to improve his mind.
+    </p>
+    <h2 id="moto">
+      <span id="grey-part">Are you a</span> Curious Mind <span id="grey-part">?</span>
+    </h2>
+
+    <%= link_to 'Not yet… But I want', new_user_registration_path, class: 'btn btn-default' %>
+
+    <% if user_signed_in? %>
+      <%= link_to 'Start', student_profile_path, class: 'btn btn-success' %>
+    <% else %>
+      <%= link_to 'Start', new_user_session_path, class: 'btn btn-success' %>
+    <% end %>
 
 
-<body class= "homepage">
+  </div>
 
-  <!-- Header -->
-    <header class= "topscreen">
-        <div class="header-content">
-            <div class="header-content-inner">
-            <%= image_tag 'logo_home.png', id: 'home-logo' %>
-              <p id="intro-text">A curious mind loves learning things and playing. A little curious like new technologies and wants to improve his mind.</p>
-               <h2 id= "moto"><span id="grey-part">Are you a</span> Curious Mind <span id="grey-part">?</span></h2>
-                  <% if user_signed_in? %>
-                    <%= link_to student_profile_path do %>
-                      <button class="button-start"> START</button>
-                    <% end %>
-                  <% else %>
-                    <%= link_to new_user_session_path do %>
-                      <button class="button-start"> START</button>
-                    <% end %>
-                  <% end %>
 
-                  <%= link_to new_user_registration_path do %>
-                   <button class="button-start"> NOT YET BUT I WANT</button>
-                  <%end%>
-            </div>
-        </div>
-
-    </header>
+  <header class="topscreen">
+    <div class="header-content">
+      <div class="header-content-inner">
+      </div>
+    </div>
+  </header>
 
   <!-- Intro Section -->
-    <section class="intro">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2 class="section-heading">Information to parents</h2>
-                    <p class="text-light"> Curious Minds is a platform created by students @ Le Wagon Brussels, to provide a creative way for students to enter the world of computer sciences through challenges. All the challenges are provided from professional teachers.</p>
-                    <p class="text-light">We’re deeply committed to creating a <strong>safe</strong> and <strong>secure</strong> learning environment for our students and teachers. We take the protection of this information seriously. <strong>We do not sell your Personal Information</strong> or exploit it for financial gain; we do not sell ads.</p>
-                </div>
-            </div>
+  <section class="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2 class="section-heading">Information to parents</h2>
+          <p class="text-light"> Curious Minds is a platform created by students @ Le Wagon Brussels, to provide a creative way for students to enter the world of computer sciences through challenges. All the challenges are provided from professional teachers.</p>
+          <p class="text-light">We’re deeply committed to creating a <strong>safe</strong> and <strong>secure</strong> learning environment for our students and teachers. We take the protection of this information seriously. <strong>We do not sell your Personal Information</strong> or exploit it for financial gain; we do not sell ads.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-  <!-- Content 1 -->
-    <section class="content text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-offset-3 col-sm-6">
-                  <h2 class="section-header"> Be a computer expert</h2>
-                  <p class="lead text-muted">Give the chance to yourself to improve your skills in your free time with the most creative and funny way! </p>
-                  <%= link_to new_user_registration_path do %>
-                  <button class="button-start"> Join</button>
-                  <% end %>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-  <!-- Footer -->
-    <footer class="page-footer">
-
-      <!-- Contact Us -->
-        <div class="contact">
-          <div class="container">
-        <h2 class="section-heading">Contact Us</h2>
-        <ul class= "list-inline contat-infos">
-          <li><span class="glyphicon glyphicon-earphone"></span><br/>+32 (0)476 53 88 75</li>
-          <li><span class="glyphicon glyphicon-envelope"></span><br/>contact@kodowallonie.be</li>
-        </ul>
+  <section class="home-content text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-offset-3 col-sm-6">
+          <div class="well">
+            <h2 class="section-header"> Be a computer expert</h2>
+            <p class="lead text-muted">Give the chance to yourself to improve your skills in your free time with the most creative and funny way! </p>
+            <%= link_to 'Join', new_user_registration_path, class: 'btn button-start' %>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Copyright etc -->
-        <div class="small-print">
-          <div class="container">
-            <p>Copyright &copy; Batch 29 - Brussels - 2016</p>
-          </div>
-        </div>
-
-    </footer>
-
-
-</body>
-
+  <%= image_tag 'logo_home.png', class: 'homepage-logo' %>
+  <%= render 'shared/footer' %>
+</div>
