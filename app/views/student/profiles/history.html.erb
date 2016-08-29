@@ -5,20 +5,14 @@
         <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
         <ul class="nav nav-pills navbar-stacked">
           <li>
-            <%= link_to student_challenges_path do %>
-            <button class="btn sidebar"> Start new Challenge </button>
-            <%end%>
+            <%= link_to 'Start new Challenge', student_challenges_path, class:"btn sidebar" %>
           </li>
 
           <li>
-            <%= link_to history_student_profile_path do %>
-            <button class="btn sidebar"> History and Progress </button>
-            <%end%>
+            <%= link_to 'History and Progress', history_student_profile_path, class:"btn sidebar" %>
           </li>
           <li>
-            <%= link_to edit_student_profile_path do %>
-            <button class="btn sidebar"> Edit profile</button>
-            <%end%>
+            <%= link_to 'Edit profile', edit_student_profile_path, class:"btn sidebar" %>
           </li>
         </ul><br>
       </div>

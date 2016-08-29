@@ -1,26 +1,43 @@
+.backpic{
+  background: image-url("backgroundProfile.png");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
 
 .outerbox{
   position: relative;
-  margin: 40px;
+  margin: 0px;
   display: flex;
+  margin-top: 180px;
 }
 
+// .mainmoto{
+//   margin-top: 100px;
+// }
 
 /* Set gray background color and 100% height */
 .sidenavbar {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #f1f1f1;
+  // background-color: #f1f1f1;
   height: 400px;
+  max-width:250px;
   box-shadow: 0 1px 2px #d1d1d1;
   border-radius:9px;
+
 }
 
 .listnotdone{
   position: absolute;
   top: 0;
   right: 0;
+  justify-content: space-between;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
@@ -28,21 +45,23 @@
   .sidenavbar {
     height: auto;
     padding: 15px;
-}
+  }
 
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .stmanage {
   height: 1500px
 }
 
-  .stmanage {height: auto;}
+.stmanage {
+  height: auto;}
+
 }
 
 /* Set avatar's details */
 .stavatar-large {
   width: 100px;
   border-radius: 50%;
-  margin: 20px 90px;
+  margin: 20px 50px;
 }
 
 .nickname{
@@ -70,6 +89,8 @@
   padding-bottom: 20px;
   box-shadow: 0 1px 2px #d1d1d1;
   border-radius:9px;
+  background-image: url("web.png");
+  background-size: cover;
 }
 
 .split {
@@ -81,15 +102,15 @@
   font-family: Open Sans;
   font-size: 25px;
   width: 300px ;
-  margin: 30px auto;
+  margin: 0px auto;
   opacity: 0.8;
-  padding:10px;
+  padding:2px;
   // padding-top: 10px;
   // padding-bottom: 10px;
   text-align: center;
   background-color: #9dcedc;
   background-size: 100%;
   border-radius: 10px;
-  color: $gray-dark;
+  color: white;
   box-shadow: 0 1px 2px #d1d1d1;
 }

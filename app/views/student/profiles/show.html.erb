@@ -1,6 +1,13 @@
+<div class="backpic"></div>
 <div class="container-fluid outerbox">
+<!--   <div class="row">
+    <div class="col-sm-12 mainmoto">
+      CURIOUS MIND
+    </div>
+  </div> -->
+
   <div class="row content stmanage">
-      <div class="col-sm-4 sidenavbar">
+      <div class="col-sm-4 col-xs-6 sidenavbar">
         <h4 class="nickname text-center"><%= current_user.name %></h4>
         <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
         <ul class="nav nav-pills navbar-stacked">
@@ -9,22 +16,18 @@
           </li>
 
           <li>
-            <%= link_to history_student_profile_path do %>
-            <button class="btn sidebar"> History and Progress </button>
-            <%end%>
+            <%= link_to 'History and Progress', history_student_profile_path, class:"btn sidebar" %>
           </li>
           <li>
-            <%= link_to edit_student_profile_path do %>
-            <button class="btn sidebar"> Edit profile</button>
-            <%end%>
+            <%= link_to 'Edit profile', edit_student_profile_path, class:"btn sidebar" %>
           </li>
         </ul><br>
       </div>
 
-      <div class="col-sm-8 listnotdone">
+      <div class="col-sm-8 col-xs-6 listnotdone">
           <div class="coursesnotdone-wrapper text-center">
               <div id="data">
-                  <h2 class = "unfinished">Not finished courses</h2>
+                  <h2 class = "unfinished">Playground</h2>
                   <table class="table table-striped">
                     <thead>
                       <td>Challenge</td>
@@ -46,3 +49,4 @@
       </div>
   </div>
 </div>
+
