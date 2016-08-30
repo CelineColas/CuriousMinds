@@ -1,0 +1,48 @@
+.section-background {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.section-background-student {
+  background-image: linear-gradient(107deg, rgba(0, 0, 0, 0.3) -29%, rgba(255, 255, 255, 0.2) 61%), image-url("windmill.jpg");
+}
+.section-background-profile {
+  background: image-url("backgroundProfile.png");
+}
+.section-background-history {
+ background-image: linear-gradient(107deg, rgba(0, 0, 0, 0.1) -29%, rgba(255, 255, 255, 0.1) 61%), image-url("booksbackgroundOK.jpg");
+}
+
+.section-manager {
+  padding: 100px 0 0 0;
+}
+
+
+.section-sidenavbar {
+  background: image-url("polygon.jpg");
+  background-size: cover;
+  opacity: 0.9;
+  box-shadow: 0 1px 2px #d1d1d1;
+  border-radius: 6%;
+  position: relative;
+  padding: 20px;
+  margin-top: 80px;
+
+  .avatar-picture {
+    position: absolute;
+    top: -40px;
+    width: 100px;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -50px;
+  }
+}
+
+.sidenavbarB {
+  background-image: linear-gradient(107deg, rgba(0, 0, 0, 0.3) -29%, rgba(255, 255, 255, 0.2) 61%), image-url("web.png");
+}
