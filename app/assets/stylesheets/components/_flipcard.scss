@@ -131,7 +131,7 @@
 //   }
 // }
 
-.btn-save{
+.btn-save {
   font-family: $header-font;
   background-color:#89C00B;
   padding:10px 20px;
@@ -139,16 +139,16 @@
   border:1px solid #89C00B;
   color:white;
   box-shadow: 1px 1px 2px #3fc00b;
-
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+    color:white !important;
+    background-color: #3fc00b !important;
+    border: 1px solid #3fc00b !important;
+    box-shadow: 1px 1px 2px #2d8b07 !important;
+  }
 }
 
-.btn-save:hover{
-  text-decoration: none;
-  color:white;
-  background-color: #3fc00b;
-  border: 1px solid #3fc00b;
-  box-shadow: 1px 1px 2px #2d8b07;
-}
 
 .placed-btn{
   position:absolute;
