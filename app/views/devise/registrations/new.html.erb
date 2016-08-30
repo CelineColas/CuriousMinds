@@ -1,20 +1,21 @@
-<div class="singup">
-  <h2>Sign up</h2>
+<div class="sign text-center">
 
+  <h2>Sign up</h2>
+ <div class="wrapper">
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
-    <div class="form-inputs">
+    <div class="form-inputs text-center">
       <%= f.input :email, required: true, autofocus: true %>
       <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
       <%= f.input :password_confirmation, required: true %>
     </div>
 
-    <div class="form-check">
+    <div class="form-check text-center">
       <%= f.input :teacher, as: :boolean, label: "I am a teacher" %>
     </div>
 
-    <div class="form-check">
+    <div class="form-check text-center">
       <label class="form-check-label">
         <input class="form-check-input" type="checkbox" value="">
         Agree to terms and conditions
@@ -28,4 +29,5 @@
 
 
   <%= render "devise/shared/links" %>
+  </div>
 </div>
