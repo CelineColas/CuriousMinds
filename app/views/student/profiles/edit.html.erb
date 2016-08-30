@@ -1,43 +1,39 @@
-<body>
- <div class="container">
-   <div class="row">
-     <div class="col-md-12">
-       <div class="panel">
-         <img class="pic img-circle" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User photo"/>
-         <div class="username">Nickname</div>
-        </div>
-     </div>
-     </div>
-     <div class="row">
-       <div class="col-md-3">
-     <div class="sidebar-nav">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <span class="visible-xs navbar-brand">Profile menu</span>
-        </div>
-        <div class="navbar-collapse collapse sidebar-navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Edit profile</a></li>
-          </ul>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="userpic">
+        <%= image_tag 'profile_img.png', class: 'pic img-circle'%>
+        <div class="username">Nickname</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar-nav">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+
+            </button>
+            <span class="visible-xs navbar-brand">Profile menu</span>
+          </div>
+          <div class="navbar-collapse collapse sidebar-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Edit profile</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-  </div>
+    </div>
+    <div class="col-md-9">
+      <!-- <span class="profile-item-header"> Edit profile:</span> -->
+      <div class="edit-profile">
+
+      <%= render 'form' %>
+
      </div>
-     <div class="col-md-9">
-<!--        <span class="profile-item-header"> Edit profile:</span> -->
-        <div class="edit-profile">
-
-        <%= render 'form' %>
-
-       </div>
    </div>
   </div>
-</body>
-
-
+</div>
