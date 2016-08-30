@@ -1,30 +1,27 @@
-<div class="backpicA"></div>
+<div class="section-background section-background-student"></div>
 
-<div class="container-fluid outerbox">
-<!--   <div class="row">
-    <div class="col-sm-12 mainmoto">
-      CURIOUS MIND
-    </div>
-  </div> -->
-
-  <div class="row content stmanage">
-      <div class="col-sm-4 col-xs-6 sidenavbarA">
-        <h4 class="nickname text-center"><%= current_user.name %></h4>
-        <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
-        <ul class="nav nav-pills navbar-stacked">
-          <li class= "fancy">
-            <%= link_to 'Start new Challenge', student_challenges_path, class:"btn sidebar" %>
-          </li>
-          <li class= "fancy">
-            <%= link_to 'History and Progress', history_student_profile_path, class:"btn sidebar" %>
-          </li>
-          <li class= "fancy">
-            <%= link_to 'Edit profile', edit_student_profile_path, class:"btn sidebar" %>
-          </li>
-        </ul><br>
+<div class="section-manager">
+  <div class="row">
+      <div class="col-sm-4">
+        <div class="section-sidenavbar">
+          <h4 class="nickname text-center"><%= current_user.name %></h4>
+          <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
+          <ul class="nav nav-pills navbar-stacked">
+            <li class= "fancy">
+              <%= link_to 'Start new Challenge', student_challenges_path, class:"btn sidebar" %>
+            </li>
+            <li class= "fancy">
+              <%= link_to 'History and Progress', history_student_profile_path, class:"btn sidebar" %>
+            </li>
+            <li class= "fancy">
+              <%= link_to 'Edit profile', edit_student_profile_path, class:"btn sidebar" %>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="col-sm-8 col-xs-6 listnotdone">
+      <div class="col-sm-8">
+        <div class="listnotdone">
           <div class="coursesnotdone-wrapper text-center">
               <div id="data">
                   <h2 class = "unfinished">Playground</h2>
@@ -46,6 +43,8 @@
                   </table>
               </div>
           </div>
+
+        </div>
       </div>
   </div>
 </div>
