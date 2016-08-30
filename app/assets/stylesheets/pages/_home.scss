@@ -1,5 +1,5 @@
 .homepage-logo {
-  width: 100px;
+  width: 90px;
   margin: 10px auto;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .home-content {
-  padding: 60px 0;
+  padding: 100px 0;
   background-image: linear-gradient(-225deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.7) 50%), image-url("cables.JPG");
   background-size: cover;
   width: 100%;
@@ -101,4 +101,9 @@
 
 .section-header{
   font-size:25px;
+}
+
+.lead {
+  margin:30px auto;
+  color:$gray-light;
 }

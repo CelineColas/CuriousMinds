@@ -1,33 +1,37 @@
-// Your footer style
-
 .page-footer {
   text-align: center;
   }
 
 .page-footer .contact {
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: #7979b5;
   color: #fff;
   }
 
-.page-footer .contact h2 {
-  font-size:30px;
+  .small-icon{
+    width:300px;
+  }
+
+// .page-footer .contact h2 {
+//   font-size:30px;
+// }
+
+.fontawesome{
+  font-size:25px;
 }
 
 .page-footer .contact p {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 300;
   }
 
 .contat-infos > li {
-  padding: 0 40px;
+  padding: 0 90px;
 }
 
-.content-3 .glyphicon,
-.page-footer .contact .glyphicon {
-  font-size: 25px;
-  font-weight: 700;
-  }
+// .page-footer .contact {
+//   font-weight: 700;
+//   }
 
 // .page-footer .small-print {
 //   padding: 40px 0 40px;
@@ -36,5 +40,5 @@
 
 .copyright-text{
   font-size:15px;
-  margin: 50px auto 0 auto;
+  margin: 50px auto;
 }
