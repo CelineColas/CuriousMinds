@@ -28,7 +28,19 @@
   background-size: cover;
   opacity: 0.9;
   box-shadow: 0 1px 2px #d1d1d1;
-  border-radius:6%;
+  border-radius: 6%;
+  position: relative;
+  padding: 20px;
+  margin-top: 80px;
+
+  .avatar-picture {
+    position: absolute;
+    top: -40px;
+    width: 100px;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -50px;
+  }
 }
 
 .sidenavbarB {

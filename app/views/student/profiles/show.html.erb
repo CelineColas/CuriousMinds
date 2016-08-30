@@ -4,8 +4,8 @@
   <div class="row">
       <div class="col-sm-4">
         <div class="section-sidenavbar">
+          <%= image_tag 'kid.jpg', class: 'avatar-picture'%>
           <h4 class="nickname text-center"><%= current_user.name %></h4>
-          <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
           <ul class="nav nav-pills navbar-stacked">
             <li class= "fancy">
               <%= link_to 'Start new Challenge', student_challenges_path, class:"btn sidebar" %>
@@ -21,10 +21,10 @@
       </div>
 
       <div class="col-sm-8">
+        <h2 class="emperor">Playground</h2>
         <div class="listnotdone">
           <div class="coursesnotdone-wrapper text-center">
               <div id="data">
-                  <h2 class = "unfinished">Playground</h2>
                   <table class="table table-striped intable">
                     <thead class="headersA">
                       <td class="headerA">Challenge</td>
