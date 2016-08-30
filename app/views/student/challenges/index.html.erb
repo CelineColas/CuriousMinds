@@ -1,4 +1,4 @@
-<div class="backpic"></div>
+<div class="backpicB"></div>
 <div class="container-fluid outerbox">
 <!--   <div class="row">
     <div class="col-sm-12 mainmoto">
@@ -7,7 +7,7 @@
   </div> -->
 
   <div class="row content stmanage">
-      <div class="col-sm-4 col-xs-6 sidenavbar">
+      <div class="col-sm-4 col-xs-6 sidenavbarB">
         <h4 class="nickname text-center"><%= current_user.name %></h4>
         <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
         <ul class="nav nav-pills navbar-stacked">
@@ -22,26 +22,26 @@
       </div>
 
       <div class="col-sm-8 col-xs-6 listnotdone">
-          <div class="coursesnotdone-wrapper text-center">
+          <div class="coursesnotdoneB-wrapper text-center">
               <div id="data">
-                  <h2 class = "unfinished">Start a new challenge</h2>
-                  <table class="table table-striped">
-                    <thead>
-                      <td>Title</td>
-                      <td>Description</td>
-                      <td>Difficulty</td>
-                      <td>Category</td>
+                  <h2 class = "unfinishedB">Start a new challenge</h2>
+                  <table class="table table-striped intable">
+                    <thead class="headersB">
+                      <td class="headerB">Title</td>
+                      <td class="headerB">Description</td>
+                      <td class="headerB">Difficulty</td>
+                      <td class="headerB">Category</td>
                     </thead>
                     <tbody class="split" >
                           <% @challenges.each do |challenge| %>
                           <tr>
-                            <td><%= link_to student_challenge_path(challenge) do %>
+                            <td class = "celltwo"><%= link_to student_challenge_path(challenge) do %>
                               <%= challenge.title %>
                               <% end %>
                             </td>
-                            <td><%= challenge.description %></td>
-                            <td><%= challenge.difficulty %></td>
-                            <td><%= challenge.category %></td>
+                            <td class = "celltwo"><%= challenge.description %></td>
+                            <td class = "celltwo"><%= challenge.difficulty %></td>
+                            <td class = "celltwo"><%= challenge.category %></td>
                           </tr>
                         <% end %>
                     </tbody>
