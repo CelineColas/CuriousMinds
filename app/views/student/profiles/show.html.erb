@@ -1,4 +1,5 @@
-<div class="backpic"></div>
+<div class="backpicA"></div>
+
 <div class="container-fluid outerbox">
 <!--   <div class="row">
     <div class="col-sm-12 mainmoto">
@@ -7,18 +8,17 @@
   </div> -->
 
   <div class="row content stmanage">
-      <div class="col-sm-4 col-xs-6 sidenavbar">
+      <div class="col-sm-4 col-xs-6 sidenavbarA">
         <h4 class="nickname text-center"><%= current_user.name %></h4>
         <p><%= image_tag 'kid.jpg', class: 'stavatar-large'%></p>
         <ul class="nav nav-pills navbar-stacked">
-          <li>
+          <li class= "fancy">
             <%= link_to 'Start new Challenge', student_challenges_path, class:"btn sidebar" %>
           </li>
-
-          <li>
+          <li class= "fancy">
             <%= link_to 'History and Progress', history_student_profile_path, class:"btn sidebar" %>
           </li>
-          <li>
+          <li class= "fancy">
             <%= link_to 'Edit profile', edit_student_profile_path, class:"btn sidebar" %>
           </li>
         </ul><br>
@@ -28,11 +28,11 @@
           <div class="coursesnotdone-wrapper text-center">
               <div id="data">
                   <h2 class = "unfinished">Playground</h2>
-                  <table class="table table-striped">
-                    <thead>
-                      <td>Challenge</td>
-                      <td>Teacher</td>
-                      <td>Progress</td>
+                  <table class="table table-striped intable">
+                    <thead class="headersA">
+                      <td class="headerA">Challenge</td>
+                      <td class="headerA">Teacher</td>
+                      <td class="headerA">Progress</td>
                     </thead>
                     <tbody class="split" >
                       <% @unfinished_quests.each do |quest| %>

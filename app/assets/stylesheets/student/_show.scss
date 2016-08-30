@@ -1,5 +1,5 @@
-.backpic{
-  background: image-url("backgroundProfile.png");
+.backpicA{
+  background-image: linear-gradient(107deg, rgba(0, 0, 0, 0.3) -29%, rgba(255, 255, 255, 0.2) 61%), image-url("windmill.jpg");
   background-size: cover;
   position: absolute;
   top: 0;
@@ -21,15 +21,19 @@
 // }
 
 /* Set gray background color and 100% height */
-.sidenavbar {
+.sidenavbarA {
   position: absolute;
   top: 0;
   left: 0;
   // background-color: #f1f1f1;
+  background: image-url("polygon.jpg");
+  background-size: cover;
+  opacity: 0.9;
   height: 400px;
   max-width:250px;
   box-shadow: 0 1px 2px #d1d1d1;
-  border-radius:9px;
+  border-radius:6%;
+  margin-left: 50px;
 
 }
 
@@ -38,11 +42,12 @@
   top: 0;
   right: 0;
   justify-content: space-between;
+  min-width: 120px;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
-  .sidenavbar {
+  .sidenavbarA {
     height: auto;
     padding: 15px;
   }
@@ -84,6 +89,7 @@
 .coursesnotdone-wrapper {
   flex: 1 0 auto;
   background-color: #f1f1f1;
+  margin-right: 150px;
   height: auto;
   padding: 0 10px;
   padding-bottom: 20px;
@@ -101,6 +107,7 @@
 .unfinished {
   font-family: Open Sans;
   font-size: 25px;
+  font-weight: bold;
   width: 300px ;
   margin: 0px auto;
   opacity: 0.8;
@@ -113,4 +120,58 @@
   border-radius: 10px;
   color: white;
   box-shadow: 0 1px 2px #d1d1d1;
+}
+
+.headerA{
+  border-radius: 50% 50% 0px 0px;
+  background: black;
+  color: white;
+  opacity: 0.4;
+}
+
+.headersA{
+  margin-top: 10px;
+}
+
+.intable{
+  margin: 20px 0px 0px 0px;
+}
+
+/* Grow  buttons*/
+.fancy .sidebar{
+    // border-radius: 90%;
+    color:yellow;
+    position: relative;
+    background-color: blue;
+    margin: 5px 23px;
+    opacity: 0.5;
+    border: none;
+    border-radius:5%;
+    font-size: 12px;
+    color: #FFFFFF;
+    padding: 5px;
+    width: 210px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.fancy, .sidebar:after {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.fancy, .sidebar:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
