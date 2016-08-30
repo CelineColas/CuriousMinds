@@ -14,17 +14,29 @@
   position:relative;
   width: 100%;
   min-height: 100vh;
-  // font-family: $header-font; A CHECKER !!!
+  background-image: image-url('Background-img.jpg');
+  background-size:cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  // background: linear-gradient(to left, #feffa3 0%, #9df27b 80%);
+  font-family: $header-font;
   // font-weight: 900;
 }
 
 .card {
-  margin: 120px;
+  font-family: $header-font;
+  margin: 70px auto;
   color: white;
   cursor: pointer;
   position: relative;
   .card-front {
-    background: $gray-light;
+    background: #59aeee;
+    border: 2px solid #4795d0;
+    box-shadow: 2px 2px 2px #4795d0;
     position: absolute;
     top: 0;
     right: 0;
@@ -51,7 +63,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: $gray-lighter;
+  background: #59aeee;
+  border: 2px solid #4795d0;
+  box-shadow: 2px 2px 2px #4795d0;
   transform: rotateY(-180deg);
   text-align: center;
   display: flex;
@@ -79,6 +93,11 @@
   text-align: center center;
 }
 
+.explainations-card{
+  margin:90px auto;
+  font-size:15px;
+}
+
 .card-input {
   position: absolute;
   top: 10px;
@@ -90,32 +109,52 @@
 
 .input-field {
   margin:10px;
-  width: 394px;
-  height: 107px;
+  width: 415px;
+  height: 117px;
   background-color: white;
   color:$gray;
   padding: 2 px;
 }
 
-.btn-success{
-  margin:20px;
-}
+// .button-answer{
+//   margin:20px;
+//   background-color:#89C00B;
+//   border-radius:9px;
+//   border:1px solid #89C00B;
+//   padding: 10px 20px;
+//   color:white;
+//   border:#89C00B;
+
+//   .button-answer:hover{
+//     background-color:#5e8506;
+//     color:white;
+//   }
+// }
 
 .btn-save{
-  background-color: $brand-primary;
-  padding:15px 25px;
+  font-family: $header-font;
+  background-color:#89C00B;
+  padding:10px 20px;
   border-radius: 9px;
+  border:1px solid #89C00B;
   color:white;
-  position:absolute;
-  bottom: 200px;
-  right:150px;
+  box-shadow: 1px 1px 2px #3fc00b;
 
 }
 
 .btn-save:hover{
   text-decoration: none;
   color:white;
-  background-color: #469AE0;
+  background-color: #3fc00b;
+  border: 1px solid #3fc00b;
+  box-shadow: 1px 1px 2px #2d8b07;
 }
+
+.placed-btn{
+  position:absolute;
+  bottom: 150px;
+  right:120px;
+}
+
 
 

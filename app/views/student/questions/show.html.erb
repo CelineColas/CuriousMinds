@@ -1,25 +1,25 @@
 <% @question = Question.find(params[:id]) %>
-<div class="desk">
-<div class="card">
-  <div class="card-front">
-    <div class="clickable-surface">
-      <h1 class="title-card"><%= @question.title %></h1>
+<div class="desk"></div>
+  <div class="card">
+    <div class="card-front">
+      <div class="clickable-surface">
+        <h1 class="title-card"><%= @question.title %></h1>
+        <p class="explainations-card">Click to turn me and answer the question</p>
+      </div>
+    </div>
+    <div class="card-back">
+      <div class="card-input">
+        <%= simple_form_for [:student, @quest, @question, @effort] do |f| %>
+        <%= f.input_field :content, placeholder: "Write your answer here", class: "input-field" %>
+        <%= f.button :submit, 'Answer', class: "btn-save" %>
+        <% end %>
+      </div>
+      <div class="clickable-surface">
+      </div>
     </div>
   </div>
-  <div class="card-back">
-    <div class="card-input">
-      <%= simple_form_for [:student, @quest, @question, @effort] do |f| %>
-        <%= f.input_field :content, class: "input-field" %>
-        <%= f.button :submit, 'Answer', class: "btn btn-success" %>
-      <% end %>
-    </div>
-    <div class="clickable-surface">
-
-    </div>
-  </div>
-</div>
 
 
-<%= link_to 'Save and Quit', submit_student_quest_path(@quest), method: :patch, class: "btn-save" %>
+<%= link_to 'Save and Quit', submit_student_quest_path(@quest), method: :patch, class: "btn-save placed-btn" %>
 
-</div>
+
