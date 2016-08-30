@@ -1,13 +1,21 @@
-<div class="wrapper-new text-center">
+<div class="chal text-center">
 
-<h2><%= @challenge.title %></h2>
+<h2 class="title"><%= @challenge.title %></h2>
+
 
 <div class="container-description">
   <h4>Your mission</h4>
-  <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facilis tenetur est. Nihil necessitatibus eligendi, velit nisi repudiandae assumenda sed voluptate aut corrupti fugit temporibus sequi alias dolores cumque iure.</p>
-</div>
+  <div class="text-style">
+  <p class="text-style">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facilis tenetur est. Nihil necessitatibus eligendi, velit nisi repudiandae assumenda sed voluptate aut corrupti fugit temporibus sequi alias dolores cumque iure.</p>
+  </div>
 
 <%= simple_form_for [:student, @challenge, @quest] do |f| %>
-  <%= f.submit "Let's go!", class: "btn btn-primary" %>
+
+ <%= link_to "Back to challenges", student_challenges_path, class: "btn btn-success" %>
+  <%= f.submit "Let's go!",  class: "btn btn-success" %>
+
 <% end %>
+
+
+</div>
 </div>
