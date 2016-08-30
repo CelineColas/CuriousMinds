@@ -1,1 +1,36 @@
 // Your footer style
+
+.page-footer {
+  text-align: center;
+  }
+
+.page-footer .contact {
+  padding: 50px 0;
+  background-color: #7979b5;
+  color: #fff;
+  }
+
+.page-footer .contact p {
+  font-size: 22px;
+  font-weight: 300;
+  }
+
+.contat-infos > li {
+  padding: 0 40px;
+}
+
+.content-3 .glyphicon,
+.page-footer .contact .glyphicon {
+  font-size: 32px;
+  font-weight: 700;
+  }
+
+.page-footer .small-print {
+  padding: 40px 0 40px;
+  font-weight: 300;
+  }
+
+.copyright-text{
+  font-size:15px;
+  margin: 70px auto;
+}

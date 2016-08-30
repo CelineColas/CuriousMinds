@@ -35,7 +35,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <h2 class="section-heading">Information to parents</h2>
           <p class="text-light"> Curious Minds is a platform created by students @ Le Wagon Brussels, to provide a creative way for students to enter the world of computer sciences through challenges. All the challenges are provided from professional teachers.</p>
-          <p class="text-light">We’re deeply committed to creating a <strong>safe</strong> and <strong>secure</strong> learning environment for our students and teachers. We take the protection of this information seriously. <strong>We do not sell your Personal Information</strong> or exploit it for financial gain; we do not sell ads.</p>
+          <p class="text-light">We’re deeply committed to creating a <strong>safe</strong> and <strong>secure</strong> learning environment for our students and teachers. We take the protection of personal informations seriously. <strong>We do not sell your personal information</strong> or exploit it for financial gain. And, by the way, we don't sell ads.</p>
         </div>
       </div>
     </div>
@@ -47,14 +47,15 @@
         <div class="col-sm-offset-3 col-sm-6">
           <div class="well">
             <h2 class="section-header"> Be a computer expert</h2>
-            <p class="lead text-muted">Give the chance to yourself to improve your skills in your free time with the most creative and funny way! </p>
-            <%= link_to 'Join', new_user_registration_path, class: 'btn button-start' %>
+            <p class="lead text-muted">Give the chance to yourself to improve your skills in your free time with the most creative and funny way! <br/>Join us, click on the logo </p>
+            <%= link_to new_user_registration_path do %>
+            <%= image_tag 'logo_home.png', class: 'homepage-logo' %>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <%= image_tag 'logo_home.png', class: 'homepage-logo' %>
   <%= render 'shared/footer' %>
 </div>
