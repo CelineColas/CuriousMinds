@@ -24,13 +24,13 @@
                     <tbody class="split" >
                           <% @challenges.each do |challenge| %>
                           <tr>
-                            <td class = "celltwo"><%= link_to student_challenge_path(challenge) do %>
+                            <td><%= link_to student_challenge_path(challenge), class: "sith" do %>
                               <%= challenge.title %>
                               <% end %>
                             </td>
-                            <td class = "celltwo"><%= challenge.description %></td>
-                            <td class = "celltwo"><%= challenge.difficulty %></td>
-                            <td class = "celltwo"><%= challenge.category %></td>
+                            <td><%= challenge.description %></td>
+                            <td><%= challenge.difficulty %></td>
+                            <td><%= challenge.category %></td>
                           </tr>
                         <% end %>
                     </tbody>
