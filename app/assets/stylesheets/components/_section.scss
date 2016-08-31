@@ -17,6 +17,9 @@
 .section-background-history {
  background-image: linear-gradient(107deg, rgba(0, 0, 0, 0.1) -29%, rgba(255, 255, 255, 0.1) 61%), image-url("booksbackgroundOK.jpg");
 }
+.section-background-challenges {
+ background-image: linear-gradient(107deg, rgba(0, 0, 0, 0.1) -29%, rgba(255, 255, 255, 0.1) 61%), image-url("planet.jpg");
+}
 
 .section-manager {
   padding: 100px 0 0 0;
@@ -24,14 +27,15 @@
 
 
 .section-sidenavbar {
-  background: image-url("polygon.jpg");
-  background-size: cover;
-  opacity: 0.9;
+  width:260;
+  min-width: 250px;
+  max-width: 260px;
   box-shadow: 0 1px 2px #d1d1d1;
   border-radius: 6%;
   position: relative;
-  padding: 20px;
+  padding: 73px 26px 20px 20px;
   margin-top: 80px;
+  margin-left: 50px;
 
   .avatar-picture {
     position: absolute;
@@ -41,8 +45,29 @@
     left: 50%;
     margin-left: -50px;
   }
+
+
+}
+
+.section-sidenavbar-student{
+  background: image-url("polygon.jpg");
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.section-sidenavbar-history{
+  background: image-url("orangepoly.jpg");
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.section-sidenavbar-challenges{
+  background: image-url("backgroundProfile.png");
+  background-size: cover;
+  opacity: 0.9;
 }
 
 .sidenavbarB {
   background-image: linear-gradient(107deg, rgba(0, 0, 0, 0.3) -29%, rgba(255, 255, 255, 0.2) 61%), image-url("web.png");
 }
+
