@@ -3,18 +3,7 @@
 <div class="container-fluid section-manager">
   <div class="row">
       <div class="col-sm-4">
-        <div class="section-sidenavbar section-sidenavbar-history">
-          <%= image_tag 'kid.jpg', class: 'avatar-picture'%>
-          <h4 class="nickname text-center"><%= current_user.name %></h4>
-          <ul class="nav nav-pills navbar-stacked">
-            <li class= "fancy">
-            <%= link_to 'Playground', student_profile_path, class:"btn sidebar" %>
-            </li>
-            <li class= "fancy">
-              <%= link_to 'Start new Challenge', student_challenges_path, class:"btn sidebar" %>
-            </li>
-          </ul>
-        </div>
+        <%= render 'shared/sidenavbar' %>
       </div>
 
       <div class="col-sm-8">
