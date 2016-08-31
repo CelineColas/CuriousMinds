@@ -4,49 +4,158 @@
   <title>Hmm...fail!</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  body {
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+    body {
+      text-align: center;
+      font-family: arial, sans-serif;
+      margin: 0;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.9;
+    }
 
-.job-title,
-.explainations {
-  padding:20px;
-  margin:30px auto;
-  border-radius: 10px;
-}
 
-.job-title{
-  width:850px;
-  background-color:red ;
-  color:#eee;
-  /*color:yellow;*/
-}
 
-.explainations{
-  width:500px;
-  background-color:#eee ;
-  box-shadow: 1px 1px 1px #777;
-  color:#333;
-}
+    .job-title,
+    .explainations {
+      padding:40px;
+      margin:30px auto;
+      border-radius: 10px;
+    }
+
+    .job-title{
+      width:850px;
+      background-color: #321345;
+      color:#eee;
+      padding-top: 20px;
+      /*color:yellow;*/
+      transition: all 300ms ease;
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+      box-shadow: 0px 0px 0px rgba(1,1,1, 0.5);
+
+    }
+
+    .job-title:hover {
+      opacity: 0.9;
+      transform: scale(1.04);
+      box-shadow: 3px 3px 3px rgba(1,1,1, 0.5);
+    }
+
+    .explainations{
+      width:850px;
+      background-color:#eee ;
+      box-shadow: 1px 1px 1px #777;
+      color:#333;
+      text-align: left;
+    }
+
+
+
+    .navbar-wagon {
+      box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+      // background: white;
+      background: rgba(255,255,255,0.5);
+      transition: all 0.3s ease;
+      display: flex;
+      height: 70px;
+      padding: 0px 30px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Optional class to fix the navbar on top */
+    .navbar-wagon-fixed {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      width: 100%;
+    }
+
+    /* Navbar logo */
+    .navbar-wagon-brand img {
+      width: 50px;
+    }
+
+    /* Navbar right section (with form, links, button) */
+    .navbar-wagon-right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Navbar item */
+    .navbar-wagon-item {
+      flex: 0 1 auto;
+      cursor: pointer;
+      padding: 0 20px;
+    }
+
+    /* Navbar standard link */
+    .navbar-wagon-link {
+      color: #616668;
+      font-size: 14px;
+      text-decoration: none;
+      font-size: 24px;
+    }
+    .navbar-wagon-link:hover {
+      color: #da552f;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+
+
+
 
   </style>
 </head>
 
-<body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div class="job-title">
-      <h1>Job offer - Debugging (wo)man for CuriousMinds inc.</h1>
-      <h3>GREAT opportunity to work for free</h3>
-    </div>
-<!--     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum minima maxime quos, voluptatem, quod voluptate labore incidunt tenetur eaque ea quae commodi deleniti eveniet illum, vel officia architecto nisi, in.</p>
-     <h5>If you've understood this, you're hired !</h5> -->
-     <div class="explainations">
-    <p>Long text with bullshit informations, as all the tasks or whatever ^^</p>
-    </div>
-    <img src="#" alt="Something like 'we need you'">
+<body  background="assets/error_back.png" no-repeat>
+
+ <div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <img src="assets/favicon.png" />
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <a href="http://kodowallonie.be" class="navbar-wagon-item navbar-wagon-link">Contact us</a>
   </div>
+</div>
+
+
+
+<!-- This file lives in public/500.html -->
+<div class="dialog">
+
+
+  <div class="job-title">
+    <h1>Job offer - Debugging (wo)man for CuriousMinds inc.</h1>
+    <h3>GREAT opportunity to work for free</h3>
+  </div>
+<!--     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum minima maxime quos, voluptatem, quod voluptate labore incidunt tenetur eaque ea quae commodi deleniti eveniet illum, vel officia architecto nisi, in.</p>
+ <h5>If you've understood this, you're hired !</h5> -->
+ <div class="explainations">
+  <h3>Required skills: </h3> <br>
+  <ul>
+    <li>
+      BS/MS degree in Computer Science or equivalent</li>  <li> Ruby on Rails knowledge,</li> <li> Excellent problem investigation and solving skills,</li> <li> Experience with installation and maintenance enterprise level applications is a must,</li> <li>Professional experience troubleshooting, maintaining, or developing data-driven applications connected to relational databases, XML sources, web services, </li> <li> Understanding of networking: IP-addressing, data routing, network configuring is a must, <li> Experience with multi-system/ platform program integration,</li> <li> Knowledge of Unix/Linux systems </li> <li> Excellent English; knowledge of other languages is a plus, </li> <li> Ruby on Rails, </li> <li> JavaScript,</li> <li> Associated JS liliaries JQuery,</li> <li> HTML5,</li> <li> CSS3
+    </li>
+
+  </ul>
+
+  <a href="http://kodowallonie.be">Apply for the position</a>
+
+</div>
+</div>
 </body>
 </html>
