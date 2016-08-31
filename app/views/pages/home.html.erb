@@ -9,12 +9,12 @@
       <span id="grey-part">Are you a</span> Curious Mind <span id="grey-part">?</span>
     </h2>
 
-    <%= link_to 'Not yet… But I want', new_user_registration_path, class: 'btn btn-default' %>
+    <%= link_to 'Not yet… But I want', new_user_registration_path, class: 'btn btn-sm btn-default' %>
 
     <% if user_signed_in? %>
-      <%= link_to 'Start', student_profile_path, class: 'btn btn-success' %>
+      <%= link_to 'Start', student_profile_path, class: 'btn btn-lg btn-success btn-shadow' %>
     <% else %>
-      <%= link_to 'Start', new_user_session_path, class: 'btn btn-success' %>
+      <%= link_to 'Start', new_user_session_path, class: 'btn btn-lg btn-success btn-shadow' %>
     <% end %>
 
 
