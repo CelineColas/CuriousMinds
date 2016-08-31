@@ -4,19 +4,53 @@
   <title>Hmm...fail!</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
+
+    .static {
+      background: rgba(255,255,255,0.5);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
     body {
       text-align: center;
       font-family: arial, sans-serif;
       margin: 0;
       background-size: cover;
       width: 100%;
-      height: 100vh;
       background-position: center;
       background-repeat: no-repeat;
       opacity: 0.9;
     }
 
+    button {
+      transform: scale(1);
+      box-shadow: 1px 1px 1px rgba(1,1,1,0.3);
+      background-color: #92849e;
+      border-color: #9287a0;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      align-items: center;
+      margin-left: 300px;
+      transition: all 200ms ease;
+    }
+    a:visited {
+      color: white;
+    }
 
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 3px 3px 3px rgba(1,1,1,0.5);
+    }
 
     .job-title,
     .explainations {
@@ -47,7 +81,7 @@
     .explainations{
       width:850px;
       background-color:#eee ;
-      box-shadow: 1px 1px 1px #777;
+      box-shadow: 3px 3px 3px rgba(1,1,1,0.3);
       color:#333;
       text-align: left;
     }
@@ -112,6 +146,10 @@
 
 
 
+.allocation {
+  text-align: justify;
+}
+
 
 
 
@@ -119,32 +157,34 @@
 </head>
 
 <body  background="assets/error_back.png" no-repeat>
+  <div class="static"></div>
+  <div class="navbar-wagon">
+    <!-- Logo -->
+    <a href="/" class="navbar-wagon-brand">
+      <img src="assets/favicon.png" />
+    </a>
 
- <div class="navbar-wagon">
-  <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <img src="assets/favicon.png" />
-  </a>
-
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <a href="http://kodowallonie.be" class="navbar-wagon-item navbar-wagon-link">Contact us</a>
+    <!-- Right Navigation -->
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <a href="http://kodowallonie.be" class="navbar-wagon-item navbar-wagon-link">Contact us</a>
+    </div>
   </div>
-</div>
 
 
 
-<!-- This file lives in public/500.html -->
-<div class="dialog">
+  <!-- This file lives in public/500.html -->
+  <div class="dialog">
 
 
-  <div class="job-title">
-    <h1>Job offer - Debugging (wo)man for CuriousMinds inc.</h1>
-    <h3>GREAT opportunity to work for free</h3>
-  </div>
+    <div class="job-title">
+      <h1>Job offer - Debugging (wo)man for CuriousMinds inc.</h1>
+      <h3>GREAT opportunity to work for free</h3>
+
+    </div>
 <!--     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum minima maxime quos, voluptatem, quod voluptate labore incidunt tenetur eaque ea quae commodi deleniti eveniet illum, vel officia architecto nisi, in.</p>
  <h5>If you've understood this, you're hired !</h5> -->
  <div class="explainations">
+ <p class="allocation" >The core values of our approach include direct communication with the client and your onshore colleagues, flat management structure and opportunity to influence various project-related decisions, trust and transparency, freedom and responsibility. Our general ethos is to facilitate self-driven peer-to-peer learning environment which would suit employees in a very diverse.</p>
   <h3>Required skills: </h3> <br>
   <ul>
     <li>
@@ -153,7 +193,7 @@
 
   </ul>
 
-  <a href="http://kodowallonie.be">Apply for the position</a>
+  <button><a href="http://kodowallonie.be">Apply for the position</a></button>
 
 </div>
 </div>
