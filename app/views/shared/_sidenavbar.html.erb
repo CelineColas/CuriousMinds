@@ -3,10 +3,14 @@
   <h4 class="nickname text-center"><%= current_user.name %></h4>
   <ul class="nav">
     <li>
-      <%= link_to 'Start new Challenge', student_challenges_path, class:"btn btn-block btn-default btn-success btn-shadow" %>
+      <%= link_to 'Playground', student_profile_path, class:"btn btn-block btn-default btn-success btn-shadow" %>
+    </li>
+
+    <li>
+      <%= link_to 'Start new Challenge', student_challenges_path, class:"btn btn-block btn-default btn-success btn-shadow courses-challenges" %>
     </li>
     <li>
-      <%= link_to 'History and Progress', history_student_profile_path, class:"btn btn-block btn-default" %>
+      <%= link_to 'History and Progress', history_student_profile_path, class:"btn btn-block btn-default btn-shadow courses-history" %>
     </li>
     <li>
       <%= link_to 'Edit profile', edit_student_profile_path, class:"btn btn-block btn-default" %>

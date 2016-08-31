@@ -1,17 +1,19 @@
-<div class="section-background section-background-history"></div>
+  <div class="section-background section-background-edit"></div>
 
-<div class="container-fluid section-manager">
-  <div class="row">
-      <div class="col-sm-4">
-        <%= render 'shared/sidenavbar' %>
-      </div>
-
-      <div class="col-sm-8">
-        <div class="userpic">
-          <%= image_tag 'profile_img.png', class: 'pic img-circle'%>
-          <div class="username">Nickname</div>
+  <div class="container-fluid section-manager">
+    <div class="row vader-edit">
+        <div class="col-sm-4">
+          <%= render 'shared/sidenavbar' %>
         </div>
-        <%= render 'form' %>
+
+        <div class="col-sm-8">
+      <div class="editprof">
+          <div class="userpic">
+            <%= image_tag 'profile_img.png', class: 'pic img-circle'%>
+            <div class="username">Nickname</div>
+          </div>
+          <%= render 'form' %>
+        </div>
       </div>
     </div>
   </div>
