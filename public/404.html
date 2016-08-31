@@ -4,18 +4,25 @@
   <title>404 - Page not found...</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  body {
-    background-color: #b51212;
-    color: #fff;
+
+  .dialog {
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
   }
 
-  .help-msg{
+  .error,
+  .call-us {
+    width:500px;
+    background-color:#eee;
+    color:#777;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
   }
 
-  .error{
+  .sos{
+    color:red;
   }
 
   </style>
@@ -24,12 +31,15 @@
 <body>
   <!-- This file lives in public/404.html -->
   <div class="dialog">
-    <div>
-      <h1 class="error">404 - Page not found...</h1>
-      <p>But we're searching for it now !</p>
+    <div class="error">
+      <h1 class="sos">404 - Page not found...</h1>
+      <p><strong>But</strong> we're searching for it now !</p>
     </div>
+    <!-- To change : size of video !! -->
     <iframe width="853" height="480" src="https://www.youtube.com/embed/xwfuhGweTtw?rel=0&amp;controls=0&amp;showinfo=0&start=52&end=59&loop=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
-    <p class="help-msg">If you want, you can call us on searching404@notfound.com</p>
+    <div class="call-us">
+    <p>PS : If you find her, you can mail us on <strong>searching404@notfound.com</strong></p>
+    </div>
   </div>
 </body>
 </html>
