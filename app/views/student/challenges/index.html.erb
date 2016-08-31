@@ -7,20 +7,21 @@
           <%= image_tag 'kid.jpg', class: 'avatar-picture'%>
           <h4 class="nickname text-center"><%= current_user.name %></h4>
           <ul class="nav nav-pills navbar-stacked">
-          <li>
-            <%= link_to 'Playground', student_profile_path, class:"btn sidebar" %>
-          </li>
-          <li>
-            <%= link_to 'History and Progress', history_student_profile_path, class:"btn sidebar" %>
-          </li>
+            <li class= "fancy">
+              <%= link_to 'Playground', student_profile_path, class:"btn sidebar" %>
+            </li>
+            <li class= "fancy">
+              <%= link_to 'History and Progress', history_student_profile_path, class:"btn sidebar" %>
+            </li>
           </ul>
         </div>
       </div>
 
+
       <div class="col-sm-8">
-        <h2 class="emperor">Start a new Challenge</h2>
+        <h2 class="emperor emperor-challenges">Start a new Challenge</h2>
         <div class="listnotdone">
-          <div class="coursesnotdone-wrapper text-center">
+          <div class="coursesnotdone-wrapper text-center courses-challenges">
               <div id="data">
                   <table class="table table-striped intable">
                     <thead class="headersA">
