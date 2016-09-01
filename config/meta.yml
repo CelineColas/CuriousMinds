@@ -1,5 +1,5 @@
-# config/meta.yml
-# meta_title: "CuriousMinds - Learn to play, play to learn"
-# meta_description: "Curious Minds is a platform to help kids to learn things about new technologies."
-# meta_image: "logo.png" # Une image dans votre dossier app/assets/images/
-# twitter_account: "@KodoWallonie" # indispensable pour les Twitter Cards
+config/meta.yml
+meta_title: "CuriousMinds - Learn to play, play to learn"
+meta_description: "Curious Minds is a platform to help kids to learn things about new technologies."
+meta_image: "logo_home.png" # Une image dans votre dossier app/assets/images/
+twitter_account: "@KodoWallonie" # indispensable pour les Twitter Cards
