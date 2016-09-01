@@ -67,3 +67,28 @@
   margin:30px auto;
   color:$gray-light;
 }
+
+.home-zeplin {
+  position: absolute;
+  top: 420px;
+  max-height: 150px;
+  right: 140px;
+  animation: zeplin 15s ease-in-out forwards;
+  animation-delay: 300ms;
+  opacity: 0.8;
+}
+
+@keyframes zeplin {
+  0% {
+    top: 500px;
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    top: -150px;
+  }
+}
