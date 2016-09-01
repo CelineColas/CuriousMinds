@@ -1,16 +1,4 @@
-// .form-group {
-//   padding: 50px;
-// }
-
-// .form-group label {
-//   display: none;
-// }
-
-// #effort_content {
-//   border-radius: 10px;
-// }
-
-.desk{
+.desk {
   position:relative;
   width: 100%;
   min-height: 100vh;
@@ -22,27 +10,16 @@
   bottom: 0;
   left: 0;
   z-index: -1;
-  // background: linear-gradient(to left, #feffa3 0%, #9df27b 80%);
   font-family: $header-font;
-  // font-weight: 900;
 }
 
 .card {
   font-family: $header-font;
-  margin: 70px auto;
+  // margin: 70px auto;
   color: white;
   cursor: pointer;
   position: relative;
-  .card-front {
-    background: #59aeee;
-    border: 2px solid #4795d0;
-    box-shadow: 2px 2px 2px #4795d0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-  }
+  height: 100vh;
 }
 
 
@@ -55,17 +32,18 @@
   height: 300px;
   width: 500px;
   text-align: center;
-}
-
-.card-back  {
+  top: 70px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  top: 70px;
   right: 0;
+  left: 0;
+  bottom: 0;
   background: #59aeee;
   border: 2px solid #4795d0;
   box-shadow: 2px 2px 2px #4795d0;
+}
+
+.card-back  {
   transform: rotateY(-180deg);
   text-align: center;
   display: flex;
@@ -93,9 +71,9 @@
   text-align: center center;
 }
 
-.explainations-card{
-  margin:90px auto;
-  font-size:15px;
+.explainations-card {
+  margin: 100px auto 0;
+  font-size: 15px;
 }
 
 .card-input {
@@ -116,21 +94,6 @@
   padding: 2 px;
 }
 
-// .button-answer{
-//   margin:20px;
-//   background-color:#89C00B;
-//   border-radius:9px;
-//   border:1px solid #89C00B;
-//   padding: 10px 20px;
-//   color:white;
-//   border:#89C00B;
-
-//   .button-answer:hover{
-//     background-color:#5e8506;
-//     color:white;
-//   }
-// }
-
 .btn-save {
   font-family: $header-font;
   background-color:#89C00B;
@@ -149,12 +112,16 @@
   }
 }
 
-
-.placed-btn{
-  position:absolute;
-  bottom: 150px;
-  left:50%;
+.flipcard-textarea {
+  padding: 20px;
+  border-radius: 9px;
+  margin-top: 20px;
+  min-width: 450px;
+  border: none;
 }
-
-
-
+.flipcard-btn-quit {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+  margin-left: -85px;
+}

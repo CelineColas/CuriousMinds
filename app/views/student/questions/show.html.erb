@@ -1,25 +1,24 @@
 <% @question = Question.find(params[:id]) %>
 <div class="desk"></div>
-  <div class="card">
-    <div class="card-front">
-      <div class="clickable-surface">
-        <h1 class="title-card"><%= @question.title %></h1>
-        <p class="explainations-card">Click to turn me and answer the question</p>
-      </div>
-    </div>
-    <div class="card-back">
-      <div class="card-input">
-        <%= simple_form_for [:student, @quest, @question, @effort] do |f| %>
-        <%= f.input_field :content, placeholder: "Write your answer here", class: "input-field"%>
-        <%= f.button :submit, 'Answer', class: "btn btn-success" %>
-        <% end %>
-      </div>
-      <div class="clickable-surface">
-      </div>
+<div class="card">
+  <div class="card-front">
+    <div class="clickable-surface">
+      <h1 class="title-card"><%= @question.title %></h1>
+      <p class="explainations-card">Click to turn me and answer the question</p>
     </div>
   </div>
-
-
-<%= link_to 'Save and Quit', submit_student_quest_path(@quest), method: :patch, class: "btn btn-default placed-btn" %>
-
+  <div class="card-back">
+    <div class="card-input">
+      <%= simple_form_for [:student, @quest, @question, @effort] do |f| %>
+      <%= f.input_field :content, placeholder: "Write your answer here", class: "input-field flipcard-textarea"%>
+      <%= f.button :submit, 'Answer', class: "btn btn-success" %>
+      <% end %>
+    </div>
+    <div class="clickable-surface">
+    </div>
+  </div>
+  <div class="text-center flipcard-btn-quit">
+    <%= link_to 'Save and Quit', submit_student_quest_path(@quest), method: :patch, class: "btn btn-default btn-lg" %>
+  </div>
+</div>
 
