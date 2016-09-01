@@ -2,36 +2,44 @@
 
 <div class="section-manager">
   <div class="row">
-      <div class="col-sm-4">
-        <%= render 'shared/sidenavbar' %>
-      </div>
+    <div class="col-sm-4">
+      <%= render 'shared/sidenavbar' %>
+    </div>
 
-      <div class="col-sm-8">
-        <h2 class="emperor emperor-student">Playground</h2>
-        <div class="listnotdone">
-          <div class="coursesnotdone-wrapper text-center courses-student">
-              <div id="data">
-                  <table class="table table-striped intable">
-                    <thead class="headersA">
-                      <td class="headerA">Challenge</td>
-                      <td class="headerA">Teacher</td>
-                      <td class="headerA">Progress</td>
-                    </thead>
-                    <tbody class="split sith" >
-                      <% @unfinished_quests.each do |quest| %>
-                        <tr>
-                          <td class = "celltwo"> <%= quest.challenge.title %></td>
-                          <td class = "celltwo"> <%= quest.challenge.teacher.name %> </td>
-                          <td class = "celltwo"> <%= quest.correct_percentage %>% </td>
-                        </tr>
-                        <% end %>
-                    </tbody>
-                  </table>
-              </div>
+    <div class="col-sm-8">
+      <% if @unfinished_quests != [] %>
+      <h2 class="emperor emperor-student">Playground</h2>
+      <div class="listnotdone">
+        <div class="coursesnotdone-wrapper text-center courses-student">
+          <div id="data">
+
+            <table class="table table-striped intable">
+              <thead class="headersA">
+                <td class="headerA">Challenge</td>
+                <td class="headerA">Teacher</td>
+                <td class="headerA">Progress</td>
+              </thead>
+              <% @unfinished_quests.each do |quest| %>
+              <tbody class="split sith" >
+
+                <tr>
+                  <td> <%= quest.challenge.title %></td>
+                  <td> <%= quest.challenge.teacher.name %></td>
+                  <td> <%= quest.correct_percentage %></td>
+                </tr>
+
+                <% end %>
+              </tbody>
+            </table>
           </div>
-
         </div>
+        <% else %>
       </div>
-  </div>
+       <%= link_to 'START', student_challenges_path, class:"btn btn3d" %>
+   </div>
+   <% end %>
+
+
+ </div>
 </div>
 
