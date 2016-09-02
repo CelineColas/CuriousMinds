@@ -67,13 +67,15 @@
   right: 0;
 }
 
-.title-card{
+.title-card {
   text-align: center center;
 }
 
 .explainations-card {
-  margin: 100px auto 0;
   font-size: 15px;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
 }
 
 .card-input {

@@ -10,15 +10,21 @@
 }
 
 #moto {
-  color:#7979B5;
-  font-weight:bold;
+  color: #7979B5;
+  font-weight: bold;
   font-size: 45px;
-  margin:80px auto;
+  margin: 80px auto;
+
+}
+
+.homepage-hero-description {
+  @extend h4;
+  color: #555555;
 }
 
 #grey-part{
-  color:$gray;
-  font-weight:bold;
+  color: $gray;
+  font-weight: bold;
   font-size: 45px;
 }
 
@@ -30,9 +36,9 @@
 
 .intro {
   color: #fff;
-    background-color: #7979B5;
-    padding: 50px 0;
-    text-align: center;
+  background-color: #7979B5;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .home-content {
@@ -53,19 +59,26 @@
   background-size: cover;
 
   padding: 180px 60px 170px 60px;
+  text-shadow: 0 0 5px #fff;
 }
 
 .text-light {
-    color: rgba(250,250,250,0.9);
+  color: rgba(250,250,250,0.9);
+}
+.text-brand {
+  color: #7979B5;
+}
+.text-red {
+  color: #FA6A6F;
 }
 
 .section-header{
-  font-size:25px;
+  font-size: 25px;
 }
 
 .lead {
-  margin:30px auto;
-  color:$gray-light;
+  margin: 30px auto;
+  color: $gray-light;
 }
 
 .home-zeplin {
